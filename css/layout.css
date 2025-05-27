@@ -16,6 +16,7 @@ b, strong {
 
 header {
     height: 55px;
+    line-height: 55px;
     background: #860886;
     border-bottom: 1px solid #55abe0;
 }
@@ -30,7 +31,7 @@ header .logo .logo-text{
     color: #fff;
 }
 
-header a {
+header .topmenu .element > a {
     color: #fff;
 }
 
