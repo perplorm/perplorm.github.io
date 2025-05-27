@@ -15,15 +15,23 @@ b, strong {
 }
 
 header {
-    line-height: 100px;
-    background: #f7f5f4;
-    background: -moz-linear-gradient(top,  #f7f5f4 0%, #ededed 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f7f5f4), color-stop(100%,#ededed));
-    background: -webkit-linear-gradient(top,  #f7f5f4 0%,#ededed 100%);
-    background: -o-linear-gradient(top,  #f7f5f4 0%,#ededed 100%);
-    background: -ms-linear-gradient(top,  #f7f5f4 0%,#ededed 100%);
-    background: linear-gradient(to bottom,  #f7f5f4 0%,#ededed 100%);
+    height: 55px;
+    background: #860886;
     border-bottom: 1px solid #55abe0;
+}
+
+header .logo {
+    text-decoration: none;
+}
+
+header .logo .logo-text{
+    font-size: 55px;
+    font-weight: bold;
+    color: #fff;
+}
+
+header a {
+    color: #fff;
 }
 
 header > div.wrapper,
@@ -158,7 +166,7 @@ a:hover {
 
 .header-line {
     height: 15px;
-    background-color: #7bc4f0;
+    background-color: #560059;
 }
 
 .header-line > .wrapper {
