@@ -1,12 +1,11 @@
 ---
 layout: default
-title: Download Propel
+title: Download ❊ Perpl ❊
 ---
 
-# Download Propel #
+# Download ❊ Perpl ❊ #
 
-**Note**: The version 2 of Propel is still under development. Please visit
-<http://propelorm.org/Propel/> if you want to use a stable version.
+You can download and install ❊ Perpl ❊ via packagist or by forking the github repository <https://github.com/mringler/perpl>.
 
 For a full installation tutorial, check the [Installation documentation](documentation/01-installation). The following options allow you to download the Propel code and documentation.
 
@@ -30,30 +29,22 @@ Then touch a `composer.json` file with the following content
 }
 ```
 
-Then simply run `php composer.phar install` to fetch Propel and its dependencies.
+Then simply run `php composer.phar install` to fetch ❊ Perpl ❊ and its dependencies.
 
 ## Git ##
 
 Clone it:
 
 ```bash
-$ git clone git://github.com/propelorm/Propel2.git
+$ git clone git://github.com/mringler/perpl.git
 ```
 
 Or add it as a submodule:
 
 ```bash
-$ git submodule add git://github.com/propelorm/Propel2.git /path/to/propel
+$ git submodule add git://github.com/mringler/perpl.git /path/to/propel
 ```
 
-## Full Propel Package ##
-
-Please download one of the packages below if you would like to install the traditional Propel package, which includes both runtime and generator components.
-
-* [Last version of Propel as ZIP file](https://github.com/propelorm/Propel2/zipball/master)
-* [Last version of Propel as TAR.GZ file](https://github.com/propelorm/Propel2/tarball/master)
-
-Other releases are available for download at [files.propelorm.org](http://files.propelorm.org).
 
 ## License ##
 

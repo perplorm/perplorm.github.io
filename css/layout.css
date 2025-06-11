@@ -154,7 +154,7 @@ a:hover {
 }
 
 /* We need to disable some links as they are still valuable but don't function anymore */
-a.link-disabled {
+a.link-disabled, a.button.link-disabled {
     cursor: not-allowed;
     text-decoration: line-through;
 }
