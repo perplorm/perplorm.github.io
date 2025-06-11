@@ -11,7 +11,7 @@ Via [Composer](https://packagist.org/)
 
 ```json
 "require": {
-    "propel/propel": "~2.0@beta"
+    "perplorm/perpl": ">=2.0"
 }
 ```
 

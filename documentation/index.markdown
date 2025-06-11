@@ -69,7 +69,7 @@ You can also look at [user contributed behaviors](../documentation/cookbook/user
 * [Using SQL Schemas](/documentation/cookbook/using-sql-schemas.html) How to organize tables into SQL schemas (only for MySQL, PostgreSQL, and MSSQL).
 * [Working With Existing Databases](/documentation/cookbook/working-with-existing-databases.html) How to build an XML schema from an existing db structure, how to dump data to XML, how to import it into a new database, etc.
 
-### Contribute to Propel ###
+### Contribute to ❊ Perpl ❊ ###
 
 * [Writing A Behavior](/documentation/cookbook/writing-behavior.html) How to write a custom behavior to reuse model code horizontally.
 * [Working with Propel's Test Suite](/documentation/cookbook/working-with-test-suite.html) How to work with Propel's test suite if you want to add a missing case or attach a regression test with your patch.
