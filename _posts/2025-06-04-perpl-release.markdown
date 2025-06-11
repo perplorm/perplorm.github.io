@@ -4,7 +4,7 @@ title: ❊ Perpl ❊ Released
 published: true
 ---
 
-❊ Perpl ❊ aims to proceed where the orginal Propel seems to be stuck and unmaintained at the moment. 
+❊ Perpl ❊ aims to proceed where the original Propel seems to be stuck and unmaintained at the moment. 
 
 The initiative for this new start originated in discussions on the original repository between different Propel enthusiasts and Moritz Ringler gave it a headstart so it could be realised.
 
@@ -12,7 +12,7 @@ Since April 2025, three releases of ❊ Perpl ❊ have been made availaible.
 
 Additionally the original Propel documentation has been forked in June and made available under this website and will also be improved step by step.
 
-You will still find a lot of places where there are still links to the original Propel repositories but those will be gradually replaced time with according links for ❊ Perpl ❊.
+You will still find a lot of places where there are still links to the original Propel repositories but those will be gradually replaced over time with according links for ❊ Perpl ❊.
 
 Also, as you might find, we are still experimenting with branding.
 

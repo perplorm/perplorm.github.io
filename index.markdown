@@ -15,9 +15,9 @@ Via [Composer](https://packagist.org/)
 }
 ```
 
-All releases at packagist.org: [packagist.org/packages/propel/propel](https://packagist.org/packages/propel/propel)
+All releases at packagist.org: [packagist.org/packages/perplorm/perpl](https://packagist.org/packages/perplorm/perpl)
 
-All releases at github.com: [github.com/propelorm/Propel2/releases](https://github.com/propelorm/Propel2/releases)
+All releases at github.com: [github.com/mringler/perpl/releases](https://github.com/mringler/perpl/releases)
 
 {% endcapture %}
 

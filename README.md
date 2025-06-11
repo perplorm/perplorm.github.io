@@ -1,5 +1,5 @@
-# The Propel Website
+# The ❊ Perpl ❊ Website
 
-https://propelorm.org/
+https://perplorm.github.io
 
 Written in Markdown, built using [Jekyll](https://jekyllrb.com).

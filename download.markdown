@@ -42,7 +42,7 @@ $ git clone git://github.com/mringler/perpl.git
 Or add it as a submodule:
 
 ```bash
-$ git submodule add git://github.com/mringler/perpl.git /path/to/propel
+$ git submodule add git://github.com/mringler/perpl.git /path/to/perpl
 ```
 
 
