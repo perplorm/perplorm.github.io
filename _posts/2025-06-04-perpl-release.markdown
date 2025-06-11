@@ -1,6 +1,7 @@
 ---
 layout: post
 title: ❊ Perpl ❊ Released
+author: The ❊ Perpl ❊ Team
 published: true
 ---
 
@@ -15,6 +16,21 @@ Additionally the original Propel documentation has been forked in June and made 
 You will still find a lot of places where there are still links to the original Propel repositories but those will be gradually replaced over time with according links for ❊ Perpl ❊.
 
 Also, as you might find, we are still experimenting with branding.
+
+### Features
+
+Some of the new and improved features below:
+
+- Runs successfully tested for PHP 8.4
+- Improved type-preserving
+- Code cleanup for better readability and maintainabilty
+- Performance improvements
+- Enhanced filter system for easier performing complex queries
+- New and improved behaviors
+- Added option for importing multiple user-contributed behaviors from the same (user) repo
+- Deprecation of some old internal methods
+
+For the (few) BC-breaking changes and more detailed information on new and updated features, please visit <https://github.com/mringler/perpl>
 
 ### Download
 

@@ -11,7 +11,7 @@ For a full installation tutorial, check the [Installation documentation](documen
 
 ## Composer ##
 
-You can download Propel using Composer. First, download the `composer.phar` file using one of the following command depending on your system:
+You can download ❊ Perpl ❊ using Composer. First, download the `composer.phar` file using one of the following command depending on your system:
 
 ```bash
 $ curl -sS https://getcomposer.org/installer | php

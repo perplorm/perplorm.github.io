@@ -108,7 +108,7 @@ and here are the statuses of our master branches:
 
 <table width="100%" class="ecg">
     <tr>
-        <td><a href="https://github.com/propelorm/Propel2">Propel2</a></td><td><img src="https://github.com/propelorm/Propel2/workflows/CI/badge.svg?branch=master" /></td>
+        <td><a href="https://github.com/mringler/perpl">❊ Perpl ❊</a></td><td><img src="https://github.com/mringler/perpl/actions/workflows/ci.yml/badge.svg?branch=main" /></td>
     </tr>
     <tr>
         <td><a href="https://github.com/SkyFoxvn/PropelBundle">PropelBundle (by SkyFoxvn)</a></td><td><img src="https://github.com/SkyFoxvn/PropelBundle/actions/workflows/CI%206.0.yml/badge.svg?branch=6.0" /></td>
