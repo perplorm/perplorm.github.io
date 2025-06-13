@@ -12,6 +12,10 @@
         color: #BABABA;
     }
 
+    body{
+        background: #0D0D0D;
+        color: #BABABA  
+    }
 
     h3 {
         color: #E0E0E0;
@@ -23,7 +27,7 @@
         color: #BBB;
     }
 
-    .home-content-bottom > div.wrapper {
+    .home-content-bottom > div.wrapper, .documentation-content {
         background-color: #040404; 
     }
 
