@@ -1,0 +1,51 @@
+:root {
+    color-scheme: light dark;
+}
+  
+@media (prefers-color-scheme: dark) {
+    /* All color values have been directly inverted by substracting the original values from FFFFFF resp. FFF where applicable. */
+    /* Unfortunately all the blacks are way too black and hard to distinguish, so this needs further polishing. */
+    /* But hey, a start is a start! */
+    :root {
+        color-scheme: dark;
+        background: #0D0D0D;
+        color: #BABABA;
+    }
+
+
+    h3 {
+        color: #E0E0E0;
+    }
+
+    
+    .home-content-bottom {
+        background-color: #070707;
+        color: #BBB;
+    }
+
+    .home-content-bottom > div.wrapper {
+        background-color: #040404; 
+    }
+
+
+    .home-content-bottom > div.wrapper h1 {
+        text-align: center;
+        color: #ccc;
+        text-shadow: 0;
+    }
+
+    .markdown blockquote {
+        background: black;
+        color: #ddd;
+    }
+
+    .markdown blockquote strong:first-child {
+        background: #18100A;
+    }
+
+    .markdown blockquote strong:first-child::before {
+        background-color: #000;
+        color: #ccc;
+    }
+
+}

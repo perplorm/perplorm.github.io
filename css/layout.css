@@ -201,11 +201,11 @@ a.link-disabled, a.button.link-disabled {
 }
 
 .header-line a.active {
-    background-color: #55abe0;
+    background-color: #e055d1;
 }
 
 .header-line a:hover {
-    background-color: #4f9cd0;
+    background-color: #e055d1;
 }
 
 .home-banner:hover {
@@ -363,7 +363,7 @@ a.link-disabled, a.button.link-disabled {
     color: #9E5596;
     font-size: 12px;
     padding: 0px 20px;
-    -webkit-appearance: none;
+    -webkit-appearance: none; /* Find me a real button - this works only on <button> or other form ELEMENTS and we only have 4 <input> elements that can be styled later*/
     border-radius: 0;
     line-height: 50px;
     height: 50px;
