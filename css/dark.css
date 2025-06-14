@@ -22,7 +22,7 @@
     }
 
     .home-banner {
-        background-color: #b9009d;
+        background-color: #680058;
     }
 
     header {
@@ -44,14 +44,15 @@
     }
 
     .home-banner h2,
-     .home-banner h3{
+    .home-banner h3,
+    .home-features {
         color: #ccc;
     }
 
 
 
     .home-features {
-        background-color: mediumvioletred;
+        background-color: #6a0043;
     }
 
     .home-features-item h3, .home-features-item-last h3 {
