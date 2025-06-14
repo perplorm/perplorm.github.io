@@ -1,7 +1,7 @@
 .markdown h2 {
     padding: 15px 0;
     margin-top: 25px;
-    border-top: 1px solid #ddd;
+    /* border-top: 1px solid #ddd; */
 }
 
 .markdown h2 .link {

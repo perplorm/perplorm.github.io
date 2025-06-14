@@ -21,13 +21,56 @@
         color: #E0E0E0;
     }
 
+    .home-banner {
+        background-color: #b9009d;
+    }
+
+    header {
+        background-color: #420042;
+    }
+
+    header .logo .logo-text {
+        color: #b0b;
+        text-shadow: 0 1px 3px #bff, 0 -1px 3px #bff;     
+    }
+
+    header .topmenu .element > a {
+        color: #bff
+    }
+
+    header li a.current,
+    .header-line a, .header-line a:link {
+        background-color: dodgerblue;
+    }
+
+    .home-banner h2,
+     .home-banner h3{
+        color: #ccc;
+    }
+
+
+
+    .home-features {
+        background-color: mediumvioletred;
+    }
+
+    .home-features-item h3, .home-features-item-last h3 {
+        text-shadow: 
+        -1px -1px 1px rgba(235, 195, 234, 0.5),
+        1px 1px 1px rgba(235, 195, 234, 0.5),
+        1px -1px 1px rgba(235, 195, 234, 0.5),
+        -1px 1px 1px rgba(235, 195, 234, 0.5);
+    }
+
     
     .home-content-bottom {
         background-color: #070707;
         color: #BBB;
     }
 
-    .home-content-bottom > div.wrapper, .documentation-content {
+    .home-content-bottom > div.wrapper, 
+    .documentation-content, 
+    .main-wrapper {
         background-color: #040404; 
     }
 

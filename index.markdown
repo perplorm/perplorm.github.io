@@ -111,10 +111,10 @@ and here are the statuses of our master branches:
         <td><a href="https://github.com/mringler/perpl">❊ Perpl ❊</a></td><td><img src="https://github.com/mringler/perpl/actions/workflows/ci.yml/badge.svg?branch=main" /></td>
     </tr>
     <tr>
-        <td><a href="https://github.com/SkyFoxvn/PropelBundle">PropelBundle (by SkyFoxvn)</a></td><td><img src="https://github.com/SkyFoxvn/PropelBundle/actions/workflows/CI%206.0.yml/badge.svg?branch=6.0" /></td>
+        <td><a href="https://github.com/SkyFoxvn/PropelBundle" title="Propel 2.0.0-beta4 Integration in Symfony">PropelBundle (by SkyFoxvn)</a></td><td><img src="https://github.com/SkyFoxvn/PropelBundle/actions/workflows/CI%207.0.yml/badge.svg?branch=7.0" /></td>
     </tr>
     <tr>
-        <td><a href="https://github.com/propelorm/sfPropelORMPlugin">sfPropelORMPlugin</a></td><td><img src="https://travis-ci.org/propelorm/sfPropelORMPlugin.svg" /></td>
+        <td><a class="link-disabled" title="Outdated, only for Propel 1.6" data-href="https://github.com/propelorm/sfPropelORMPlugin">sfPropelORMPlugin</a></td><td><img src="https://travis-ci.org/propelorm/sfPropelORMPlugin.svg" /></td>
     </tr>
 </table>
 

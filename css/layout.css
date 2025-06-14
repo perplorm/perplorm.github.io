@@ -19,7 +19,31 @@ header {
     line-height: 55px;
     background: #860886;
     border-bottom: 1px solid #55abe0;
+
 }
+
+/* Later (when collapsible), to be applied for all widths. */
+@media only screen and (min-width: 600px) {
+    header {
+        position: sticky;
+        top: 1px; /* To enable sticky positioning */
+        transform: translate(0,-1px); /* To revert above rule ;-) */
+        z-index: 2; /* To avoid ugly overscroll from elements below */
+    }
+}
+
+
+/* Boilerplate for later use, to create responsive menus */
+/* For multiple menues, we must take care of proper id/class naming to not mix up the opening/reveal mechanism of different menues. */
+/* #hamburger: The open/close trigger element, e.g. a hamburger menu or three dots. */
+/* #menu.hidden: The very menu to hide initially in mobile resolution. */
+/*
+@media only screen and (max-width: 600px) {
+    #hamburger {display:initial} 
+    #menu.hidden {display:none;}
+    .flex {display: flex; flex-wrap: wrap;}
+}
+*/
 
 header .logo {
     text-decoration: none;
@@ -136,7 +160,7 @@ h2 {
 }
 
 .markdown h2 {
-    border-color: #EBC3EA;  
+    border-top: 1px solid #EBC3EA;
 }
 
 h3 {
