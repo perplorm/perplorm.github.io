@@ -82,9 +82,19 @@
         text-shadow: 0;
     }
 
+    code {
+        color: #ccc;
+        background-color: rgba(249, 249, 249, 0.1);
+    }
+
+    .highlight{
+        background-color: #230029;
+    }
+
     .markdown blockquote {
         background: black;
         color: #ddd;
+        border: 1px solid darkslateblue;
     }
 
     .markdown blockquote strong:first-child {
@@ -96,4 +106,39 @@
         color: #ccc;
     }
 
+    .markdown thead tr th {
+        background-color: #111;
+    }
+
+
+    /* jQuery UI stuff */
+
+    .ui-tabs .ui-tabs-panel {
+        background-color: #202020;
+        border-color: #230029;
+    }
+
+    .ui-tabs .ui-tabs-nav {
+        border-color: #230029;
+    }
+
+    .ui-tabs .ui-tabs-nav li {
+        background-color: #202020; 
+    }
+
+    .ui-tabs .ui-tabs-nav li a {
+        color: #ccc;
+        background-color: #101010; 
+    }
+
+    .ui-tabs .ui-tabs-nav li.ui-tabs-active {
+        border-color: #202020;
+    }
+
+    .ui-tabs .ui-tabs-nav li.ui-tabs-active a{
+        color: #ddd;
+        border-color:#230029;
+        border-bottom-color: #202020;
+        background-color: #202020;
+    }
 }
