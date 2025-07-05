@@ -41,6 +41,7 @@ title: Documentation
 * [aggregate_column](/documentation/behaviors/aggregate-column.html)
 * [archivable](/documentation/behaviors/archivable.html)
 * [auto_add_pk](/documentation/behaviors/auto-add-pk.html)
+* [config_store](/documentation/behaviors/config-store.html)
 * [delegate](/documentation/behaviors/delegate.html)
 * [i18n](/documentation/behaviors/i18n.html)
 * [nested_set](/documentation/behaviors/nested-set.html)

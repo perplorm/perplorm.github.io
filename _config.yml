@@ -69,6 +69,9 @@ documentation:
    url: /documentation/behaviors/archivable.html
  - title: auto_add_pk
    url: /documentation/behaviors/auto-add-pk.html
+ - title: config_store
+   url: /documentation/behaviors/config-store.html
+   updatestatus: new
  - title: delegate
    url: /documentation/behaviors/delegate.html
  - title: i18n

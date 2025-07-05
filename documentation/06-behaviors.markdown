@@ -133,6 +133,7 @@ Propel currently bundles several behaviors. Check the behavior documentation for
 * [aggregate_column](/documentation/behaviors/aggregate-column.html)
 * [archivable](/documentation/behaviors/archivable.html) (Replace the deprecated `soft-delete` behavior)
 * [auto_add_pk](/documentation/behaviors/auto-add-pk.html)
+* [config_store](/documentation/behaviors/config-store.html)
 * [delegate](/documentation/behaviors/delegate.html)
 * [i18n](/documentation/behaviors/i18n.html)
 * [nested_set](/documentation/behaviors/nested-set.html)

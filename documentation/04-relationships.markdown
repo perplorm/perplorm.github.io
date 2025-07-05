@@ -294,7 +294,7 @@ schema.
 ```php
 <?php
 $groupTypes = $user->getGroupTypes(); //[ [Group, int], [Group, int], ...]
-foreach ($groupTypes as list($group, $type)) { # this syntax is only available in PHP >= 5.5
+foreach ($groupTypes as list($group, $type)) {
     echo "{$user->getName()} is in group {$group->getName()} as $type";
 }
 ```
