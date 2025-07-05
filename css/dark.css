@@ -110,6 +110,9 @@
         background-color: #111;
     }
 
+    .documentation-navigation li.current a:hover {
+        text-shadow: 0px 0px 2px gold;
+    }
 
     /* jQuery UI stuff */
 

@@ -24,7 +24,7 @@ layout: base_fullscreen
                         <h3>{{ link.title }}</h3>
                     {% else %}
                         {% assign current = nil %}
-                        {% if page.url contains link.url %}
+                        {% if page.url contains link.url | remove_last: ".html" | remove_last: ".markdown"  %}
                             {% assign current = 'current' %}
                         {% endif %}
                         

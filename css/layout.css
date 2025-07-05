@@ -500,12 +500,25 @@ footer ul li {
 
 .documentation-navigation li.current a,
 .documentation-navigation li.current a:link {
-    color: #3D922A;
-    text-decoration: underline;
+    font-style:  italic;    
+    letter-spacing: .2em;
+    backdrop-filter:invert(20%);
+    padding-left:10px;
+    padding-right:  10px; 
+    border-radius:5px;
 }
 
 .documentation-navigation li.current a:hover {
-    color: #2c6920;
+    font-style: oblique 25deg;
+    font-weight: bold;
+    color: currentColor;
+    text-shadow: 0px 0px 2px purple;
+}
+
+.documentation-navigation li.new.current a::after {
+    background-color:initial; 
+    border: none; 
+    text-decoration: underline;
 }
 
 .documentation-content ul.toc {
