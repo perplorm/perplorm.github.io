@@ -1,14 +1,15 @@
 <ul class="topmenu">
     {% for link in site.navigation %}
       {% assign current = nil %}
-      {% if page.url contains link.url | replace: ".html", "" %}
+      {% assign linkurl = link.url | replace: ".html", "" | replace: ".markdown", "" %}
+      {% if page.url contains linkurl %}
         {% assign deckungsgleich = 'wahr' %}
         {% assign current = 'current' %}
       {% else %}
         {% assign deckungsgleich = 'falsch' %}
       {% endif %}
       <li class="element {% if forloop.first %}first{% endif %} {{ current }} {% if forloop.last %}last{% endif %}">
-          <a class="{{ current }}" href="{{ link.url }}" title="{{ deckungsgleich }} | {{ page.title }} - {{ page.url }} - {{ request.path }} - {{link.url | replace: '.html', ''}} - {{link.child_active}} - {{link.child_current}} - {{link.current}}">{{ link.title }}</a>
+          <a class="{{ current }}" href="{{ link.url }}" title="{{ deckungsgleich }} | {{ page.title }} - {{ page.url }} - {{ request.path }} - {{ link.url }} {{ linkurl }}- {{ link.child_active }} - {{ link.child_current }} - {{ link.current }}">{{ link.title }}</a>
       </li>
     {% endfor %}
 </ul>
