@@ -48,3 +48,10 @@ you spot:
 
 
 All releases: [github.com/mringler/perpl/releases](https://github.com/mringler/perpl/releases)
+
+Of course all of this would not have been possible without the original [Propel Team](https://propelorm.org/about-us.html) & [countless other people](https://github.com/mringler/perpl/graphs/contributors)!
+
+> **As Isaac Newton <cite>[said](https://digitallibrary.hsp.org/media/collectiveaccess/images/7/0/4/13381_ca_object_representations_media_70422_large.jpg)</cite>:** <q
+    cite="https://digitallibrary.hsp.org/media/collectiveaccess/images/7/0/4/13381_ca_object_representations_media_70422_large.jpg">
+    If I have seen further it is by standing on yͤ shoulders of Giants.
+  </q>

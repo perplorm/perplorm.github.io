@@ -3,21 +3,25 @@ layout: blog
 ---
 
 {% for post in site.posts limit: 5 %}
-<article class="blog-tease">
-    <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-    <p class="author">
-        {% if post.author %}
-        {{ post.author }}
+    <article class="blog-tease">
+        <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+        <p class="author">
+            {% if post.author %}
+                {{ post.author }}
+            {% else %}
+                The Propel Team
+            {% endif %}
+            – <span class="date">{{ post.date | date_to_long_string }}</span>
+        </p>
+        {% if post.content contains '<!-- more -->' %}
+            <p class="excerpt">
+                {{ post.content | split: '<!-- more -->' | first }}
+                <p class="read-more"><a href="{{ post.url }}">Read more&nbsp;&raquo;</a></p>
+            </p>
         {% else %}
-        The Propel Team
+            {{ post.content}}
         {% endif %}
-        – <span class="date">{{ post.date | date_to_long_string }}</span>
-    </p>
-    <p class="excerpt">
-        {{ post.content | split: '<!-- more -->' | first }}
-        <p class="read-more"><a href="{{ post.url }}">Read more&nbsp;&raquo;</a></p>
-    </p>
-</article>
+    </article>
 {% endfor %}
 
 {% for post in site.posts offset: 5 %}
@@ -25,9 +29,9 @@ layout: blog
     <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
     <p class="author">
         {% if post.author %}
-        {{ post.author }}
+            {{ post.author }}
         {% else %}
-        The Propel Team
+            The Propel Team
         {% endif %}
         – <span class="date">{{ post.date | date_to_long_string }}</span>
     </p>
