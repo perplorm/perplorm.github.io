@@ -5,7 +5,7 @@
         {% assign current = 'current' %}
       {% endif %}
       <li class="element {% if forloop.first %}first{% endif %} {{ current }} {% if forloop.last %}last{% endif %}">
-          <a class="{{ current }}" href="{{ link.url }}" title="{{ page.title }} - {{ page.url }} - {{ request.path }} - {{link.url | replace: '.html', ''}}">{{ link.title }}</a>
+          <a class="{{ current }}" href="{{ link.url }}" title="{{ page.title }} - {{ page.url }} - {{ request.path }} - {{link.url | replace: '.html', ''}} - {{link.child_active}} - {{link.child_current}} - {{link.current}}">{{ link.title }}</a>
       </li>
     {% endfor %}
 </ul>

@@ -6,6 +6,10 @@
     display: inline-block!important;
 }
 
+.ui-widget.ui-widget-content {
+    border: none;
+}
+
 /* Main container */
 .ui-tabs {
     border-radius: 0px;

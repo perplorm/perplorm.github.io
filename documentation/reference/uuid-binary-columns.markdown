@@ -45,7 +45,7 @@ Example:
 ```php
 $arrayData = MyTableQuery::create()->setFormatter(SimpleArrayFormatter::class)->find();
 foreach($arrayData as $rows){
-    $rows['uuid_bin'] = UuidConverter::binToUuid($row['uuid_bin'];
+    $rows['uuid_bin'] = UuidConverter::binToUuid($row['uuid_bin']);
 }
 ```
 
@@ -77,7 +77,7 @@ To migrate from `UUID_BINARY` to a `CHAR` type, the column content needs to be d
 </table>
 ```
 
-> **!** The migrations will not work on MySQL below version 8 or MariaDB, since the used builtin functions are not available there **!**
+> **Compatibility Note** The migrations will not work on MySQL below version 8 or MariaDB, since the used builtin functions are not available there!
 
 ## Enabling native `UUID` columns on MariaDB
 
@@ -92,8 +92,8 @@ propel:
         uuidColumnType: native # <------ here
 ```
 
-> **!** If you use multiple databases, note that this setting affects all MySQL systems in you setup. At the moment  it is not possible to set the behavior on a database level **!**
+> **Compatibility Note** If you use multiple databases, note that this setting affects all MySQL systems in your setup. At the moment it is not possible to set the behavior on a database level!
 
 ## Issues and bugs ##
 
-Please report issues and bugs to the [Propel2 issues tracker on GitHub](https://github.com/propelorm/Propel2/issues)
+Please report issues and bugs to the [Perpl issues tracker on GitHub](https://github.com/mringler/Perpl/issues)

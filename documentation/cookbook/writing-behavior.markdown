@@ -8,8 +8,8 @@ title: How to Write A Behavior
 Behaviors are a good way to reuse code across models without requiring inheritance (a.k.a. horizontal reuse)
  This step-by-step tutorial explains how to port model code to a behavior, focusing on a simple example.
 
-In the tutorial "[Keeping an Aggregate Column up-to-date](http://propelorm.org/blog/2010/04/29/getting-to-know-propel-1-5-keeping-an-aggregate-column-up-to-date.html)" (Propel 1.x),
-posted in the [Propel blog](http://propelorm.org/blog/), the `TotalNbVotes` property of a `PollQuestion` object was updated
+In the tutorial "[Keeping an Aggregate Column up-to-date](https://perplorm.github.io/blog/2010/04/29/getting-to-know-propel-1-5-keeping-an-aggregate-column-up-to-date.html)" (Propel 1.x),
+posted in the [Propel blog](https://perplorm.github.io/blog/), the `TotalNbVotes` property of a `PollQuestion` object was updated
 each time a related `PollAnswer` object was saved, edited, or deleted. This "aggregate column" behavior was implemented by
 hand using hooks in the model classes. To make it truly reusable, the custom model code needs to be refactored and moved
 to a Behavior class.

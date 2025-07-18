@@ -81,7 +81,7 @@ $book->restoreFromArchive();
 // find the archived version of an existing book
 $archivedBook = $book->getArchive();
 // populate a book based on an archive
-$book = new book();
+$book = new Book();
 $book->populateFromArchive($archivedBook);
 ```
 
