@@ -19,12 +19,16 @@ navigation:
  - title: Blog
    url: /blog/
 documentation:
+ - title: What's new in ❊ Perpl ❊ 
+   url: /documentation/whats-new-in-perpl.html
+   updatestatus: new
+ - title: ❊ Perpl ❊ Changelog
+   url: https://github.com/mringler/perpl/releases
+   updatestatus: new
  - title: What's new in Propel 2.0
    url: /documentation/whats-new.html
- - title: Changelog
-   url: https://github.com/propelorm/Propel2/blob/master/UPDATE.md
- - title: API Documentation
-   url: http://api.propelorm.org/
+ - title: Propel API Documentation
+   url: https://api.propelorm.org/
  - title: Setup
  - title: Installing Propel
    url: /documentation/01-installation.html

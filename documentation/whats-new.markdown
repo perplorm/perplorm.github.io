@@ -12,7 +12,7 @@ Migrating your projects from Propel 1.x to Propel 2 is easy, but it needs some w
 
 This paragraph is written for all those programmers who hasn't time to go into details, by now. It exposes only those changes about Propel public api, without considering internal changes. Of course, we suggest to read in deep this chapter later.
 
-Firstly, install Propel 2 via [Composer](http://getcomposer.org/), so that you have an autoload function ready to use, Propel classes namespace already set up and you can easily adjust your model namespaces, via `composer.json`.
+Firstly, install Propel 2 via [Composer](https://getcomposer.org/), so that you have an autoload function ready to use, Propel classes namespace already set up and you can easily adjust your model namespaces, via `composer.json`.
 
 
 |New feature|Explanation |Action to do|More details|
@@ -20,14 +20,14 @@ Firstly, install Propel 2 via [Composer](http://getcomposer.org/), so that you h
 |New console|Propel command line has new commands with brand new syntax.|Run `propel` command without arguments and get a look at the new command list.|See paragraph [New console](#new-console).|
 |PSR-0 standard|Both Propel and generated model classes follow PSR-0 standard. All classes have their namespace. Propel doesn't have its own autoload function anymore.|1) Use a PSR-0 autoload function to auto-load Propel classes and generated model. You can use the Composer one or your own.<br />2) Rebuild your model with namespaces feature enabled and adjust your autoload to correctly map your model classes namespace.|See paragraph [Namespaces](#psr-0-and-namespaces).|
 |Removed Peer classes|All Peer classes were removed. Now Active Query is the first class citizen to perform queries. All methods, previously contained in Peer classes, now have an equivalent in Query classes and all constants were moved from Peer to TableMap classes.|Review your code to remove peer methods and substitute them with the ActiveQuery equivalent ones (i.e. `BookPeer::count()` now is `BookQuery::create()->count()`).|See paragraph [From Peer to ActiveQuery](#from-peer-to-activequery).|
-|Removed validators|To properly follow the *Separation of Concerns* best practice, the validator system has been removed from Propel core.|Remove all references to `<validator>` tag in your schema.xml and rebuild your model. Use an external library to validate your data (i.e. [Zend Validator](http://framework.zend.com/manual/2.2/en/modules/zend.validator.html), [Symfony Validator](http://symfony.com/doc/current/book/validation.html), [Valitron](https://github.com/vlucas/valitron) or [Respect](https://github.com/Respect/Validation)). If you prefer to still define your validators inside your `schema.xml`, you can use the new `Validate behavior`.|See [Validate Behaviour](http://propelorm.org/documentation/behaviors/validate.html)|
+|Removed validators|To properly follow the *Separation of Concerns* best practice, the validator system has been removed from Propel core.|Remove all references to `<validator>` tag in your schema.xml and rebuild your model. Use an external library to validate your data (i.e. [Zend Validator](https://framework.zend.com/manual/2.2/en/modules/zend.validator.html), [Symfony Validator](https://symfony.com/doc/current/book/validation.html), [Valitron](https://github.com/vlucas/valitron) or [Respect](https://github.com/Respect/Validation)). If you prefer to still define your validators inside your `schema.xml`, you can use the new `Validate behavior`.|See [Validate Behaviour](behaviors/validate.html)|
 |Propel\Runtime\Propel class refactor|Some `Propel` class methods have been renamed and now we have a `ServiceContainer` class.|If you don't explicit call `Propel` class methods in your code, simply rebuild your model. Otherwise, review your code to find all those methods that now are included in ServiceContainer or have been renamed.|See paragraph [Service Container](#propel-class-refactor-and-service-container)|
 |Configuration|Propel now comes with a new configuration system, which supports more formats (php, yaml, json, ini, xml). Now all configuration properties are in a single file.|Remove `build.properties`, `runtime-conf.xml`, `buildtime-conf.xml` and write all properties in `propel.ext` file ('.ext' means one of the supported extensions of your choice)|Strongly recommended to read [Configuration](10-configuration.html)|
 
 
 ## New console ##
 
-Propel 2 comes with a brand new console, based on [Symfony Console Component](http://symfony.com/doc/current/components/console/index.html).
+Propel 2 comes with a brand new console, based on [Symfony Console Component](https://symfony.com/doc/current/components/console/index.html).
 As usual, you can see a full list of available commands simply running from your command line:
 
 ```bash
@@ -86,7 +86,7 @@ The Phing tasks that you used at buildtime are now refactored to Commands. They 
 
 Propel 2 follows the [PSR-0](https://www.php-fig.org/psr/psr-0/) standard, both for its internal and generated classes.
 
-If you've never worked with namespace before, please read the [PHP official documentation](http://www.php.net/manual/en/language.namespaces.php) about it.
+If you've never worked with namespace before, please read the [PHP official documentation](https://www.php.net/manual/en/language.namespaces.php) about it.
 
 Propel directory structure has changed to adhere to the standard and class namespaces map this. Propel has no more an internal autoload function and you can use any PSR-0 autoload you prefer. If you install Propel via Composer, a PSR-0 autoloader is automatically provided and configured and you can use it simply including the relative file:
 
@@ -96,7 +96,7 @@ Propel directory structure has changed to adhere to the standard and class names
 require_once 'vendor/autoload.php';
 ```
 
-You should adjust your schema.xml to work with namespaces, according to Propel documentation (see http://www.propelorm.org/cookbook/namespaces.html) and rebuild your model.
+You should adjust your schema.xml to work with namespaces, according to Propel [namespace documentation](cookbook/namespaces.html) and rebuild your model.
 Now you are able to easily autoload your model classes:
 
 ```php
@@ -110,16 +110,16 @@ $class = new ModelClass();
 ## From Peer to ActiveQuery ##
 
 In earlier versions, Propel provided database queries via some generated Peer classes.
-Starting from version 1.5, a new object oriented query API, called [Active Query](/documentation/reference/model-criteria.html), was introduced. This feature was immediately a first class citizen in Propel world, near the good old Peer classes.
+Starting from version 1.5, a new object oriented query API, called [Active Query](reference/model-criteria.html), was introduced. This feature was immediately a first class citizen in Propel world, near the good old Peer classes.
 Now, Propel 2 leaves Peers, which are no longer available, and Active Query generated classes are the only Propel query api (of course, it's still possible to directly execute SQL code).
 
-If you've never used Active Query before, but only Peer classes, please read this [blog post](http://propelorm.org/blog/2010/08/03/refactoring-to-propel-1-5-from-peer-classes-to-query-classes.html).
+If you've never used Active Query before, but only Peer classes, please read this [blog post](https://propelorm.org/blog/2010/08/03/refactoring-to-propel-1-5-from-peer-classes-to-query-classes.html).
 
 All Peer methods are moved into Query classes, if they didn't already have an equivalent.
 All instance pool references, previously contained in Peer, now have its own Instance Pool Trait.
 All Peer constants, about tables structure, now are in TableMap classes.
 
-Please, refer to [Propel API](http://api.propelorm.org/2.0-master/) and read the generated Query and TableMap classes, for other details.
+Please, refer to [Propel API](https://api.propelorm.org/2.0-master/) and read the generated Query and TableMap classes, for other details.
 
 
 ## Adapter, Connection and Statement classes ##
@@ -183,7 +183,7 @@ include $configFilePath;
 
 ## Configuration ##
 
-The way of configuring Propel is changed. Now there's only one configuration file and more formats are supported. You can write your configuration file in plain php, ini, json, yaml or xml format. Read the [Configuration chapter](10-configuration.html) of the documentation and [configuration reference](/documentation/reference/configuration-file.html) chapter for a complete explanation of configuration properties.
+The way of configuring Propel is changed. Now there's only one configuration file and more formats are supported. You can write your configuration file in plain php, ini, json, yaml or xml format. Read the [Configuration chapter](10-configuration.html) of the documentation and [configuration reference](reference/configuration-file.html) chapter for a complete explanation of configuration properties.
 
 ## Migrations and reverse engineering ##
 

@@ -154,6 +154,29 @@ h1 {
     padding-bottom: 20px;
 }
 
+/* Adds a small container with the most recent commit date for the page, appended to h1 and footer if available. */
+.update-info {
+    font-size: small;
+    color: GrayText;    
+}    
+
+h1 span.update-info {
+    display: block;
+    position: relative;
+    left: 2em;    
+    top: -0.5em;
+}
+
+h1 span.update-info a {
+    color: GrayText;
+    text-decoration: underline dotted;
+}
+
+h1 span.update-info a:hover {
+    color: #ad31b1;
+}
+
+
 h2 {
     font-size: 22px;
     padding-bottom: 15px;

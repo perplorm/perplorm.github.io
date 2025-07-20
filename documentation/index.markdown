@@ -6,9 +6,10 @@ title: Documentation
 
 # Documentation #
 
- * [What's New in Propel 2.0](whats-new.html) Users of previous versions can check the changes here.
- * [Changelog](https://github.com/propelorm/Propel2/blob/master/UPDATE.md) Updates of the version 2.0.
- * [API Documentation](http://api.propelorm.org/) The generated API documentation.
+ * [What's New in ❊ Perpl ❊](whats-new-in-perpl.html) The differences of ❊ Perpl ❊ compared to Propel2.
+ * [❊ Perpl ❊ Changelog](https://github.com/mringler/perpl/releases) The ❊ Perpl ❊ release history.
+ * [What's New in Propel 2.0](whats-new.html) Users of 1.x versions can check the changes here.
+ * [Propel API Documentation](http://api.propelorm.org/) The generated API documentation.
 
 ## Project Setup ##
 

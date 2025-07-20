@@ -23,11 +23,70 @@
             <a href="/about-us.html">About us</a> | <a class="link-disabled" data-href="http://sandbox.propelorm.org/">Sandbox</a> | <a href="https://github.com/mringler/perpl">Github</a>
         </p>
         <p class="fork_and_edit">
-            Found a typo ? Something is wrong in this documentation? Just <a
-                href="https://github.com/perplorm/perplorm.github.io/edit/master/{{ page.path }}">fork
-            and edit</a> it!
+            Found a typo ? Something is wrong in this documentation? Just 
+            <a href="https://github.com/perplorm/perplorm.github.io/edit/main/{{ page.path }}">
+                fork and edit
+            </a> this page!
         </p>
+        <span class="update-info">
+            View this page's 
+            <a href="https://github.com/perplorm/perplorm.github.io/commits/main/{{ page.path }}" target="_blank">
+                commit history
+            </a>. | 
+            See all 
+            <a href="https://github.com/propelorm/Propel2/compare/master...mringler:perpl:main">
+                changes between ❊ Perpl ❊ and Propel2
+            </a>
+        </span>
         <br/>
         </div>
     </footer>
 </div> <!-- wrapper -->
+
+<script>
+    function fetchPageUpdateInformation () {
+        fetch('https://api.github.com/repos/perplorm/perplorm.github.io/commits?path={{ page.path }}')
+        .then((response) => {
+            if (!response.ok) {
+                returnedCommits = false;
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            };
+            return response.json();
+        }).then((commits) => {
+            returnedCommits = commits;
+        });
+
+        if (returnedCommits.length) {
+            setUpdateInformation (returnedCommits);
+        };
+    };
+
+    function setUpdateInformation (returnedCommits) {
+        lastCommit = returnedCommits[0];
+        lastCommitURL = lastCommit['html_url'];
+        lastCommitTimeStamp = lastCommit['commit']['author']['date'];
+        lastCommitDateTime = lastCommitTimeStamp.toLocaleDateString();
+
+        h1 = document.querySelector('h1');
+        topSpanToInsert = '<span class="update-info"></span>';
+        footerSpan = document.querySelector('footer div.wrapper span.update-info');
+        
+        updateInfo = `
+            Last page update: 
+            <a href=${lastCommitURL}>
+                ${lastCommitDateTime}
+            </a>
+        `;
+        if (h1) {
+            h1.innerHTML += topSpanToInsert;
+            h1.insertAdjacentHTML('beforeend', updateInfo);
+        }
+
+        if (footerSpan) {
+            lastCommitDateTime = lastCommitTimeStamp.toLocaleString() + ' ' + Intl.DateTimeFormat().resolvedOptions().timeZone;
+            updateInfo += ', total commits: ' + returnedCommits.length + ' | ';
+            footerSpan.insertAdjacentHTML('afterbegin', updateInfo);
+        };
+        returnedCommits.length
+    }; 
+</script>
