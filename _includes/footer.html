@@ -54,22 +54,17 @@
             return response.json();
         }).then((commits) => {
             returnedCommits = commits;
+            if (returnedCommits.length) {
+                setUpdateInformation (returnedCommits);
+            };
         });
-
-        if (returnedCommits.length) {
-            setUpdateInformation (returnedCommits);
-        };
     };
 
     function setUpdateInformation (returnedCommits) {
         lastCommit = returnedCommits[0];
         lastCommitURL = lastCommit['html_url'];
-        lastCommitTimeStamp = lastCommit['commit']['author']['date'];
+        lastCommitTimeStamp = new Date(lastCommit['commit']['author']['date']);
         lastCommitDateTime = lastCommitTimeStamp.toLocaleDateString();
-
-        h1 = document.querySelector('h1');
-        topSpanToInsert = '<span class="update-info"></span>';
-        footerSpan = document.querySelector('footer div.wrapper span.update-info');
         
         updateInfo = `
             Last page update: 
@@ -77,9 +72,13 @@
                 ${lastCommitDateTime}
             </a>
         `;
+
+        h1 = document.querySelector('h1');
+        topSpanToInsert = '<span class="update-info">' + updateInfo + '</span>';
+        footerSpan = document.querySelector('footer div.wrapper span.update-info');
+        
         if (h1) {
-            h1.innerHTML += topSpanToInsert;
-            h1.insertAdjacentHTML('beforeend', updateInfo);
+            h1.insertAdjacentHTML('beforeend', topSpanToInsert);
         }
 
         if (footerSpan) {
@@ -87,6 +86,7 @@
             updateInfo += ', total commits: ' + returnedCommits.length + ' | ';
             footerSpan.insertAdjacentHTML('afterbegin', updateInfo);
         };
-        returnedCommits.length
-    }; 
+    };
+
+    document.addEventListener('DOMContentLoaded', fetchPageUpdateInformation);
 </script>

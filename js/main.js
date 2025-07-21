@@ -7,5 +7,3 @@ $window.on('load', function() {
         $jumper.css('opacity', visible ? 1 : 0);
     });
 });
-
-document.addEventListener('DOMContentLoaded', fetchPageUpdateInformation);
