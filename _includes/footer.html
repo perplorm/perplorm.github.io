@@ -66,15 +66,12 @@
         lastCommitTimeStamp = new Date(lastCommit['commit']['author']['date']);
         lastCommitDateTime = lastCommitTimeStamp.toLocaleDateString();
         
-        updateInfo = `
-            Last page update: 
-            <a href=${lastCommitURL}>
-                ${lastCommitDateTime}
-            </a>
-        `;
+        updateInfo = function (lastCommitURL, lastCommitDateTime) {
+            return `Last page update: <a href=${lastCommitURL}>${lastCommitDateTime}</a>`;
+        };
 
         h1 = document.querySelector('h1');
-        topSpanToInsert = '<span class="update-info">' + updateInfo + '</span>';
+        topSpanToInsert = '<span class="update-info">' + updateInfo (lastCommitURL, lastCommitDateTime) + '</span>';
         footerSpan = document.querySelector('footer div.wrapper span.update-info');
         
         if (h1) {
@@ -82,8 +79,8 @@
         }
 
         if (footerSpan) {
-            lastCommitDateTime = lastCommitTimeStamp.toLocaleString() + ' ' + Intl.DateTimeFormat().resolvedOptions().timeZone;
-            updateInfo += ', total commits: ' + returnedCommits.length + ' | ';
+            lastCommitDateTime = lastCommitTimeStamp.toLocaleString();
+            updateInfo = updateInfo (lastCommitURL, lastCommitDateTime) + ', total commits: ' + returnedCommits.length + ' | ';
             footerSpan.insertAdjacentHTML('afterbegin', updateInfo);
         };
     };

@@ -170,6 +170,10 @@ h1 span.update-info {
 h1 span.update-info a {
     color: GrayText;
     text-decoration: underline dotted;
+    -webkit-text-decoration:  underline dotted;
+    /** Due to a Safari quirk, the prefixed declaration HAS to come here AFTER the regular declaration, 
+    *see https://gomakethings.com/text-decoration-style-in-webkit/ 
+    **/
 }
 
 h1 span.update-info a:hover {
