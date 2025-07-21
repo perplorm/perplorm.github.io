@@ -79,7 +79,7 @@
         }
 
         if (footerSpan) {
-            lastCommitDateTime = lastCommitTimeStamp.toLocaleString();
+            lastCommitDateTime = lastCommitTimeStamp.toLocaleString() + ' ' + Intl.DateTimeFormat().resolvedOptions().timeZone;
             updateInfo = updateInfo (lastCommitURL, lastCommitDateTime) + ', total commits: ' + returnedCommits.length + ' | ';
             footerSpan.insertAdjacentHTML('afterbegin', updateInfo);
         };
