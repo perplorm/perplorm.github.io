@@ -111,6 +111,12 @@ and here are the statuses of our master branches:
         <td><a href="https://github.com/mringler/perpl">❊ Perpl ❊</a></td><td><img src="https://github.com/mringler/perpl/actions/workflows/ci.yml/badge.svg?branch=main" /></td>
     </tr>
     <tr>
+        <td><a href="https://github.com/smhg/PropelBundle" title="❊ Perpl ❊ Integration in Symfony">PropelBundle with ❊ Perpl ❊ (by smhg)</a></td><td><img src="https://github.com/smhg/PropelBundle/actions/workflows/CI%207.0.yml/badge.svg?branch=7.0" /></td>
+    </tr>
+    <tr>
+        <td><a href="https://github.com/propelorm/Propel2">Propel 2.0.0-beta4</a></td><td><img src="https://github.com/propelorm/Propel2/actions/workflows/ci.yml/badge.svg?branch=master" /></td>
+    </tr>
+    <tr>
         <td><a href="https://github.com/SkyFoxvn/PropelBundle" title="Propel 2.0.0-beta4 Integration in Symfony">PropelBundle (by SkyFoxvn)</a></td><td><img src="https://github.com/SkyFoxvn/PropelBundle/actions/workflows/CI%207.0.yml/badge.svg?branch=7.0" /></td>
     </tr>
     <tr>
@@ -118,11 +124,13 @@ and here are the statuses of our master branches:
     </tr>
 </table>
 
+<!--
 Propel2's code climate:
 
 <img src="https://img.shields.io/badge/PHPStan-level%207-brightgreen.svg?style=flat" alt="PHPStan">
 <a href="https://app.codecov.io/gh/propelorm/Propel2"><img src="https://codecov.io/gh/propelorm/Propel2/branch/master/graph/badge.svg?token=L1thFB9nOG" alt="codecov"></a>
 <a href="https://codeclimate.com/github/propelorm/Propel2"><img src="https://codeclimate.com/github/propelorm/Propel2/badges/gpa.svg" alt="codecov"></a>
+-->
 
 {% endcapture %}
 
