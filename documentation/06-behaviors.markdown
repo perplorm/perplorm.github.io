@@ -10,7 +10,7 @@ Behaviors are a great way to package model extensions for reusability. They are 
 
 ## Pre and Post Hooks For `save()` And `delete()` Methods ##
 
-The `save()` and `delete()` methods of your generated objects are easy to override. In fact, Propel looks for one of the following methods in your objects and executes them when needed:
+The `save()` and `delete()` methods of your generated objects are easy to override. In fact, ❊ Perpl ❊ looks for one of the following methods in your objects and executes them when needed:
 
 * `preInsert`: code executed before insertion of a new object
 * `postInsert`: code executed after insertion of a new object
@@ -44,7 +44,7 @@ class Book extends BaseBook
 }
 ```
 
-Whenever you call `save()` on a new object, Propel now executes the `preInsert()` method on this objects and therefore update the `created_at` column:
+Whenever you call `save()` on a new object, ❊ Perpl ❊ now executes the `preInsert()` method on this objects and therefore update the `created_at` column:
 
 ```php
 <?php
@@ -107,11 +107,11 @@ class Author extends BaseAuthor
 
 Even if the code of this example is very simple, the repetition of code is already too much. Just imagine a more complex behavior, and you will understand that using the copy-and-paste technique soon leads to a maintenance nightmare.
 
-Propel offers three ways to achieve the refactoring of the common behavior. The first one is to use a custom builder during the build process. This can work if all of your models share one single behavior. The second way is to use table inheritance. The inherited methods then offer limited capabilities. And the third way is to use Propel behaviors. This is the right way to refactor common model logic.
+❊ Perpl ❊ offers three ways to achieve the refactoring of the common behavior. The first one is to use a custom builder during the build process. This can work if all of your models share one single behavior. The second way is to use table inheritance. The inherited methods then offer limited capabilities. And the third way is to use ❊ Perpl ❊ behaviors. This is the right way to refactor common model logic.
 
 Behaviors are special objects that use events called during the build process to enhance the generated model classes. Behaviors can add attributes and methods to both the tableMap and model classes, they can modify the course of some of the generated methods, and they can even modify the structure of a database by adding columns or tables.
 
-For instance, Propel bundles a behavior called `timestampable`, which does exactly the same thing as described above. But instead of adding columns and methods by hand, all you have to do is to declare it in a `<behavior>` tag in your `schema.xml`, as follows:
+For instance, ❊ Perpl ❊ bundles a behavior called `timestampable`, which does exactly the same thing as described above. But instead of adding columns and methods by hand, all you have to do is to declare it in a `<behavior>` tag in your `schema.xml`, as follows:
 
 ```xml
 <table name="book">
@@ -128,7 +128,7 @@ Then rebuild your model, and there you go: two columns, `created_at` and `update
 
 ## Bundled Behaviors ##
 
-Propel currently bundles several behaviors. Check the behavior documentation for details on usage:
+❊ Perpl ❊ currently bundles several behaviors. Check the behavior documentation for details on usage:
 
 * [aggregate_column](/documentation/behaviors/aggregate-column.html)
 * [archivable](/documentation/behaviors/archivable.html) (Replace the deprecated `soft-delete` behavior)
@@ -147,7 +147,7 @@ Propel currently bundles several behaviors. Check the behavior documentation for
 
 You can also look at [user contributed behaviors](/documentation/cookbook/user-contributed-behaviors.html).
 
-Behaviors bundled with Propel require no further installation and work out of the box.
+Behaviors bundled with ❊ Perpl ❊ require no further installation and work out of the box.
 
 ## Customizing Behaviors ##
 
@@ -179,7 +179,7 @@ If the columns already exist in your schema, a behavior is smart enough not to a
 
 ## Using Behaviors ##
 
-Propel installs third-part behaviors via **Composer**.
+❊ Perpl ❊ installs third-part behaviors via **Composer**.
 Simply add to your `composer.json` the behavior you wish to install:
 
 ```json
@@ -188,7 +188,7 @@ Simply add to your `composer.json` the behavior you wish to install:
 }
 ```
 
-Propel will then find the `FormidableBehavior` class whenever you use the `formidable` behavior in your schema:
+❊ Perpl ❊ will then find the `FormidableBehavior` class whenever you use the `formidable` behavior in your schema:
 
 ```xml
 <table name="author">
@@ -228,7 +228,7 @@ In this example, both the `book` and `author` table benefit from the `timestampa
 
 ## Writing a Behavior ##
 
-Check [the behaviors bundled with Propel](https://github.com/propelorm/Propel2/tree/master/src/Propel/Generator/Behavior) to see how to implement your own behavior: they are the best starting point to understanding the power of behaviors and builders.
+Check [the behaviors bundled with ❊ Perpl ❊](https://github.com/mringler/perpl/tree/main/src/Propel/Generator/Behavior) to see how to implement your own behavior: they are the best starting point to understanding the power of behaviors and builders.
 
 ### Modifying the Data Model ###
 
@@ -361,7 +361,7 @@ You can set the additional class to be generated in a subfolder by implementing 
 
 ### Providing Behaviors Through Composer ###
 
-The normal way of having behaviors available in your tables is to tell Propel explicitly which name is for which class (see
+The normal way of having behaviors available in your tables is to tell ❊ Perpl ❊ explicitly which name is for which class (see
 [Using Behaviors](#using-behaviors)) or by using the full FQCN as name.
 
 For behaviors you install through composer there's a third method by just using the behavior name defined in the external behavior composer.json file.
@@ -380,7 +380,7 @@ To allow your users to have your behavior installed by just using the name you h
 }
 ```
 
-The `"name"` value can then be used in `<behavior name="l10n" />` without assigning a name to a class by yourself in Propel's configuration file.
+The `"name"` value can then be used in `<behavior name="l10n" />` without assigning a name to a class by yourself in the ❊ Perpl ❊ configuration file.
 
 
 ### Replacing or Removing Existing Methods ###
