@@ -63,11 +63,12 @@
     function setUpdateInformation (returnedCommits) {
         lastCommit = returnedCommits[0];
         lastCommitURL = lastCommit['html_url'];
+        lastCommitMessage = lastCommit['commit']['message'];
         lastCommitTimeStamp = new Date(lastCommit['commit']['author']['date']);
         lastCommitDateTime = lastCommitTimeStamp.toLocaleDateString();
         
         updateInfo = function (lastCommitURL, lastCommitDateTime) {
-            return `Last page update: <a href=${lastCommitURL}>${lastCommitDateTime}</a>`;
+            return `Last page update: <a href=${lastCommitURL} title="${lastCommitMessage}">${lastCommitDateTime}</a>`;
         };
 
         h1 = document.querySelector('h1');
