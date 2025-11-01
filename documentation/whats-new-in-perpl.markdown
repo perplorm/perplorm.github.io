@@ -5,7 +5,7 @@ title: What's new in ❊ Perpl ❊?
 
 # What's new in ❊ Perpl ❊ #
 
-❊ Perpl ❊ is an updated Version of Propel2. It's allmost completely backwards compatible to Propel2 yet has a number of improvements, bug fixes and new features. We will update the information below over time.
+❊ Perpl ❊ is an updated Version of Propel2. It's almost completely backwards compatible to Propel2 yet has a number of improvements, bug fixes and new features. We will update the information below over time.
 
 ## Features
 

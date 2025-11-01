@@ -530,6 +530,7 @@ footer ul li {
     font-style:  italic;    
     letter-spacing: .2em;
     backdrop-filter:invert(20%);
+    display: inline-block; /* Fix backdrop-filter not working on iOS Safari */
     padding-left:10px;
     padding-right:  10px; 
     border-radius:5px;
