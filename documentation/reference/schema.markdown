@@ -51,7 +51,7 @@ First, some conventions:
 
 *  Text surrounded by a `/` is text that you would provide and is not defined in the language. (i.e. a table name is a good example of this.)
 *  Optional items are surrounded by `[` and `]` characters.
-*  Items where you have an alternative choice have a `|` character between them (i.e. true|false)
+*  Items where you have an alternative choice have a `|` character between them (i.e. true\|false)
 *  Alternative choices may be delimited by  `{` and `}` to indicate that this is the default option, if not overridden elsewhere.
 *  **...** means repeat the previous item.
 
@@ -112,6 +112,7 @@ The `<table>` element is the most complicated of the usable elements. Its defini
   [baseClass = "/baseClassName/"]
   [description="/A text description of the table/"]
   [heavyIndexing = "true|false"]
+  [bulk-load = "true|{false}"]
   [identifierQuoting = "true|{false}"]
   [readOnly = "true|false"]
   [treeMode = "NestedSet|MaterializedPath"]
@@ -147,6 +148,7 @@ According to the schema, `name` is the only required attribute.  Also, the `idMe
 * `phpNamingMethod` the naming method to use. Defaults to `underscore`, which transforms the table name into a CamelCase phpName.
 * `baseClass` allows you to specify a class that the generated Propel objects should extend (in place of `propel.om.BaseObject`).
 * `heavyIndexing` adds indexes for each component of the primary key (when using composite primary keys).
+* `bulk-load` allows table data to be loaded in bulk into the [instance pool](/documentation/03-basic-crud.html#propel-instance-pool). If true, Propel will load the whole table into memory rather than individual objects when resolving FK relations via `findPk()`. Intended to save object queries on small tables (e.g. [dimension tables](https://en.wikipedia.org/wiki/Dimension_(data_warehouse)#Dimension_table)).
 * `identifierQuoting` quotes all identifiers (table name, column names) in DDL and SQL queries. This is necessary if you use reserved words as table or column name.
 * `readOnly` suppresses the mutator/setter methods, save() and delete() methods.
 * `treeMode` is used to indicate that this table is part of a node tree. Currently the only supported values are `NestedSet` (see the [NestedSet behavior section](/documentation/behaviors/nested-set.html)) and `MaterializedPath` (deprecated).

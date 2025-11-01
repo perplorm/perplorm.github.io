@@ -567,6 +567,8 @@ foreach ($authors as $author) {
 }
 ```
 
+>**Tip**You can also minimize queries by adding the `bulk-load` attribute to a [table](/documentation/reference/schema.html#table-element). Doing so, loads the whole table into the [instance pool](03-basic-crud.html#propel-instance-pool) instead of fetching only the requested object when using `findPK()`.
+
 ## Model-Only Relationships ##
 
 Propel models can share relationships even though the underlying tables aren't linked by a foreign key. This ability may be of great use when using Propel on top of a legacy database.
