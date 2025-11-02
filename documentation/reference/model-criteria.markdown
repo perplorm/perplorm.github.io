@@ -619,7 +619,7 @@ WHERE book.TITLE = :p1'   // :p1 => 'War and Peace'
 
 ### Joining Tables ###
 
-![Join types](/images/propel-joins.svg)
+![Table join types with queries in ❊ Perpl ❊](/images/propel-joins.svg)
 
 ```php
 <?php

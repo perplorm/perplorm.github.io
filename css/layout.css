@@ -14,6 +14,16 @@ b, strong {
     font-weight: 400;
 }
 
+svg {
+    font-family: "Source Code Pro";
+    font-size:20px;
+    font-weight:300;
+    color:currentColor;
+    background-color: field;
+    stroke: currentColor;
+    fill: field;
+};
+
 header {
     height: 55px;
     line-height: 55px;
