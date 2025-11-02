@@ -327,5 +327,6 @@ $author2 = AuthorQuery::create()->findPk(1);
 // Skips the SQL query and returns the existing $author1 object
 ```
 When setting the `bulk-load` attribute to true on a [table](/documentation/reference/schema.html#table-element), `findPK()` not only maintains the requested object in the instance pool, but the whole table.
+
 ---
 <span class="next">[Next: Relationships &rarr;](04-relationships.html)</span>
