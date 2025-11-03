@@ -2,6 +2,15 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg width="1400px" height="850px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-miterlimit:1.5;">
     <style>
+        <link xmlns="http://www.w3.org/1999/xhtml" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300" rel="stylesheet" type="text/css"/>
+        <link xmlns="http://www.w3.org/1999/xhtml" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:300,400" rel="stylesheet" type="text/css"/>
+        <link xmlns="http://www.w3.org/1999/xhtml" href="/css/layout.css" rel="stylesheet" type="text/css"/>
+        <link xmlns="http://www.w3.org/1999/xhtml" href="/css/dark.css" rel="stylesheet" type="text/css"/>
+        :root {
+            fill: Field;
+            stroke: currentColor;
+        };
+
         text {
             font-family: "Source Code Pro";
             font-size:20px;font-weight:300;

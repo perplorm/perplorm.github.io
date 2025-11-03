@@ -14,16 +14,6 @@ b, strong {
     font-weight: 400;
 }
 
-svg {
-    font-family: "Source Code Pro";
-    font-size:20px;
-    font-weight:300;
-    color:currentColor;
-    background-color: field;
-    stroke: currentColor;
-    fill: field;
-};
-
 header {
     height: 55px;
     line-height: 55px;
@@ -511,7 +501,7 @@ footer ul li {
     padding-left:3px;
     padding-right:3px;
     margin-left: 0.5em; 
-    background-color: field;   
+    background-color: Field;   
 }
 
 .documentation-navigation li.new::after {
@@ -524,10 +514,10 @@ footer ul li {
     width: 150px;
     text-align: center;
     color: #B923BE;
-    background-color: field;
+    background-color: Field;
     border: 1px solid #B923BE;
     border-radius: 3px;
-    box-shadow: 0px 0px 15px 2px purple, 0px 0px 5px 12px field;    
+    box-shadow: 0px 0px 15px 2px purple, 0px 0px 5px 12px Field;    
     text-shadow: 0px 0px 3px currentColor;
 }
 
@@ -659,3 +649,12 @@ footer ul li {
 .member h3 {
     color: #ad31b1;
 }
+
+svg {
+    font-family: "Source Code Pro", "Fira Code", monospace;
+    font-size:20px;
+    font-weight:300;
+    stroke: currentColor;
+    fill: Field;
+};
+

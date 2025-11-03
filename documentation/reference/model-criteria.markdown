@@ -617,9 +617,133 @@ WHERE book.TITLE = :p1'   // :p1 => 'War and Peace'
    OR author.NAME = :p2'; // :p2 => 'Leo Tolstoi'
 ```
 
-### Joining Tables ###
+### Joining Tables in ❊ Perpl ❊ ###
 
-![Table join types with queries in ❊ Perpl ❊](/images/propel-joins.svg)
+<svg viewBox="0 0 1400 850" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="stroke-width:2px; fill-rule:evenodd; clip-rule:evenodd; stroke-linecap:round; stroke-miterlimit:1.5;">
+
+  <style>
+    .join-logic {
+      transform: translate(1em, 0.3lh);
+      filter: opacity(0.7);
+    }
+
+    .join-caption {
+      transform: translate(50px, -130px);
+      text-anchor: middle;
+    }
+
+    .join-explanation {
+      transform: translate(-50px, 130px);
+      font-size:0.8em;
+    }
+
+    .chart-caption {
+      transform: translate(600px, -3em);
+      text-anchor: middle;
+      font-size: larger;
+    }
+  </style>
+  
+  <def>
+    <circle id="LeftCircle" r="100"></circle>
+    <circle id="LeftEmptyCircle" r="100" style="fill: none"></circle>
+    <circle id="LeftRedCircle" r="100" style="fill: red;"></circle> 
+    <circle id="RightCircle" r="100" style="transform: translateX(100px);"></circle>
+    <circle id="RightEmptyCircle" r="100" style="transform: translateX(100px); fill: none;"></circle>              
+    <g id="OuterJoinSets">
+        <use href="#RightCircle"/>
+        <use href="#LeftRedCircle"/>            
+        <use href="#RightEmptyCircle"/>
+    </g>
+    <g id="ExcludingJoinSets">
+        <use href="#LeftRedCircle"/> 
+        <use href="#RightCircle"/>      
+        <use href="#LeftEmptyCircle"/>
+    </g>
+    <g id="InnerJoinSets">
+        <use href="#RightCircle"/>
+        <use href="#LeftCircle"/>       
+        <use href="#RightEmptyCircle"/>
+    </g>
+    <g id="Setmarkers" style="fill: currentColor; transform: translate(calc(4px + -0.5em), 0.3lh);">
+        <text style="transform: translateX(-30px);">A</text>
+        <text style="transform: translateX(130px);">B</text>
+    </g>
+  </def>
+  
+  <g id="JoinChart" style="transform: translateY(100px);">
+    <text class="chart-caption">Overview of different table join methods in ❊ Perpl ❊</text>
+    <g id="JoinLeftOuter" style="transform: translate(101px, 101px);">
+      <g class="join-caption">
+          <text>Left (outer) JOIN</text>
+      </g>
+      <use href="#OuterJoinSets"/>
+      <text class="join-logic">A - B</text>
+      <use href="#Setmarkers"/>
+      <g class="join-explanation">
+          <text>AQuery::create() </text>
+          <text dy="1.5em">   ->leftJoinB()</text>  
+          <text dy="3em">   ->find();</text>
+      </g>
+    </g>
+    <g id="JoinRightOuter" style="transform: translate(901px, 101px);">
+      <g class="join-caption">
+          <text>Right (outer) JOIN</text>
+      </g>
+      <use href="#OuterJoinSets" style="transform-origin: 50px 0; rotate: y 180deg;"/>
+      <text class="join-logic">B - A</text>
+      <use href="#Setmarkers"/>
+      <g class="join-explanation">
+          <text>AQuery::create() </text>
+          <text dy="1.5em">   ->rightJoinB()</text>  
+          <text dy="3em">   ->find();</text>
+      </g>
+    </g>
+    <g id="JoinInner" style="transform: translate(501px, 301px);">
+      <g class="join-caption">
+          <text>Inner JOIN</text>
+      </g>
+      <use href="#InnerJoinSets"/>
+      <path d="M 50 -86.5 A 100 100 0 0 0 50 86.5 A 100 100 1 0 0 50 -86.5" fill="red"></path>
+      <text class="join-logic">A ∩ B</text>
+      <use href="#Setmarkers"/>
+      <g class="join-explanation">
+          <text>AQuery::create() </text>
+          <text dy="1.5em">   ->innerJoinB()</text>  
+          <text dy="3em">   ->find();</text>
+      </g>
+    </g>
+    <g id="JoinLeftExcluding" style="transform: translate(101px, 501px);">
+      <g class="join-caption">
+          <text>Left excluding JOIN</text>
+      </g>
+      <use href="#ExcludingJoinSets"/>
+      <text class="join-logic">A \ B</text>
+      <use href="#Setmarkers"/>
+      <g class="join-explanation">
+          <text>AQuery::create() </text>
+          <text dy="1.5em">   ->useBQuery(Criteria::LEFT_JOIN)</text>
+          <text dy="3em">     ->filterById(null, Criteria::ISNULL);</text>
+          <text dy="4.5em">   ->endUse()</text>          
+          <text dy="6em">   ->find();</text>                   
+      </g>
+    </g>
+    <g id="JoinRightExcluding" style="transform: translate(901px, 501px);">
+      <g class="join-caption">
+          <text>Right excluding JOIN</text>
+      </g>
+      <use href="#ExcludingJoinSets" style="transform-origin: 50px 0; rotate: y 180deg;"/>
+      <text class="join-logic">B \ A</text>
+      <use href="#Setmarkers"/>
+      <g class="join-explanation">
+          <text>AQuery::create() </text>
+          <text dy="1.5em">   ->rightJoinB()</text>
+          <text dy="3em">   ->filterById(null, Criteria::ISNULL);</text>
+          <text dy="4.5em">   ->find();</text>
+      </g>
+    </g>
+  </g>
+</svg>
 
 ```php
 <?php
