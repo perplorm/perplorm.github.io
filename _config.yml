@@ -86,10 +86,13 @@ documentation:
    url: /documentation/behaviors/query-cache.html
  - title: sluggable
    url: /documentation/behaviors/sluggable.html
- - title: timestampable
-   url: /documentation/behaviors/timestampable.html
  - title: sortable
    url: /documentation/behaviors/sortable.html
+ - title: synced_table
+   url: /documentation/behaviors/synced-table.html
+   updatestatus: new
+ - title: timestampable
+   url: /documentation/behaviors/timestampable.html
  - title: validate
    url: /documentation/behaviors/validate.html
  - title: versionable

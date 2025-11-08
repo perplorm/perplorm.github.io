@@ -140,6 +140,7 @@ Then rebuild your model, and there you go: two columns, `created_at` and `update
 * [query_cache](/documentation/behaviors/query-cache.html)
 * [sluggable](/documentation/behaviors/sluggable.html)
 * [sortable](/documentation/behaviors/sortable.html)
+* [synced_table](/documentation/behaviors/synced-table.html)
 * [timestampable](/documentation/behaviors/timestampable.html)
 * [validate](/documentation/behaviors/validate.html)
 * [versionable](/documentation/behaviors/versionable.html)

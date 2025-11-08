@@ -6,6 +6,9 @@ title: Archivable Behavior
 # Archivable Behavior #
 
 The `archivable` behavior gives model objects the ability to be copied to an archive table. By default, the behavior archives objects on deletion, which makes it the Propel implementation of the "soft delete" pattern.
+
+>**Tip**In ❊ Perpl ❊, the `archivable` behavior is based on the [`synced_table`](/documentation/behaviors/synced-table.html) behavior since [July 2024](https://github.com/perplorm/perpl/pull/10).
+
 ## List of Parameters ##
 
 Adjust the behavior by adding parameters:

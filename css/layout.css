@@ -10,6 +10,28 @@ body, html {
     font-size: 14px;
 }
 
+/***************  Regarding system colors use  ****************/
+
+/* For reference see https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/system-color
+/* Throughout the document, several system colors are used. And also the currentColor keyword for inheritance.
+/* In light mode, the system colors should all be pretty much cross platform.
+
+/* In dark mode however, there seems to be a difference between some system colors:
+/* For example, Field and Canvas should basically have the same color, as they do in light mode.
+
+/* However, Field has a nice dark grayish hue of rgb(43, 42, 51) on Firefox and rgb(59, 59, 59) on Edge/Chromium on Windows
+/* whereas Field on iOS Safari is plain white rgb(255, 255, 255)
+
+/* The alternative would be Canvas: rgb(18, 18, 18) on Edge/Chromium, rgb(28, 27, 34) on Firefox on Windows which both is already much darker
+/* whereas Canvas on iOS Safari is plain black rgb(0, 0, 0)
+
+/* To be able to use a nice additional background system color, Field is being used for user agents that support a dark mode of this color
+/* To not not have iOS devices a very wrong white background in dark mode, 
+/* -apple-system-control-background is put on top as a fallback
+/* this color will be ignored as being invalid by other browsers but will render black rgb(0, 0, 0) on iOs Safari in dark mode */
+/* Please report/file an issue in case there are other user agents that treat Field differently as outlined above */
+
+
 b, strong {
     font-weight: 400;
 }
@@ -501,7 +523,8 @@ footer ul li {
     padding-left:3px;
     padding-right:3px;
     margin-left: 0.5em; 
-    background-color: Field;   
+    background-color: Field;
+    background-color: -apple-system-control-background;
 }
 
 .documentation-navigation li.new::after {
@@ -515,9 +538,11 @@ footer ul li {
     text-align: center;
     color: #B923BE;
     background-color: Field;
+    background-color: -apple-system-control-background;
     border: 1px solid #B923BE;
     border-radius: 3px;
-    box-shadow: 0px 0px 15px 2px purple, 0px 0px 5px 12px Field;    
+    box-shadow: 0px 0px 15px 2px purple, 0px 0px 5px 12px Field;
+    box-shadow: 0px 0px 15px 2px purple, 0px 0px 5px 12px -apple-system-control-background;  
     text-shadow: 0px 0px 3px currentColor;
 }
 
@@ -656,5 +681,6 @@ svg {
     font-weight:300;
     stroke: currentColor;
     fill: Field;
+    fill: -apple-system-control-background;
 };
 

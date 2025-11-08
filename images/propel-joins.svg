@@ -8,6 +8,7 @@
         <link xmlns="http://www.w3.org/1999/xhtml" href="/css/dark.css" rel="stylesheet" type="text/css"/>
         :root {
             fill: Field;
+            fill: -apple-system-control-background;
             stroke: currentColor;
         };
 
@@ -28,7 +29,8 @@
         };
 
         path {
-            fill:field;
+            fill: Field;
+            fill: -apple-system-control-background;
             stroke-width:2px;
             stroke:currentColor;
         };

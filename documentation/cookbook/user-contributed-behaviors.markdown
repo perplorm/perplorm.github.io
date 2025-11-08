@@ -7,6 +7,8 @@ title: User-Contributed Behaviors
 
 Here is a list of Propel behaviors contributed by users. Feel free to use them or to add your own behaviors to this list.
 
+>**Tip**In ❊ Perpl ❊, you can combine several behaviors from the same Github repository since [PR #25](https://github.com/perplorm/perpl/pull/25).
+
 
 ## Agnostic Behaviors ##
 

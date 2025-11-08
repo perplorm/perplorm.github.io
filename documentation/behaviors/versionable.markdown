@@ -11,6 +11,8 @@ The `versionable` behavior provides versioning capabilities to any ActiveRecord 
 * Track and browse history of the modifications of an object
 * Keep track of the modifications in related objects
 
+>**Tip**In ❊ Perpl ❊, the `versionable` behavior is based on the [`synced_table`](/documentation/behaviors/synced-table.html) behavior since [July 2024](https://github.com/perplorm/perpl/pull/10).
+
 ## Basic Usage ##
 
 In the `schema.xml`, use the `<behavior>` tag to add the `versionable` behavior to a table:
@@ -178,7 +180,7 @@ echo $book->getTitle(); // 'War and Peace'
 echo $book->getAuthor()->getLastName(); // 'Tolstoi'
 ```
 
->**Tip**Versioning of related objects is only possible for simple foreign keys. Relationships based on composite foreign keys cannot preserve relation versionning for now.
+>**Tip**Versioning of related objects is only possible for simple foreign keys. Relationships based on composite foreign keys cannot preserve relation versioning for now.
 
 ## Parameters ##
 
@@ -275,6 +277,6 @@ schema with all its necessary indices so the behavior won't overwrite/re-add it 
 
 ### Query static methods ###
 
-* `void enableVersioning()`: Enables versionning for all instances of the related ActiveRecord class
-* `void disableVersioning()`: Disables versionning for all instances of the related ActiveRecord class
-* `boolean isVersioningEnabled()`: Checks whether the versionnig is enabled
+* `void enableVersioning()`: Enables versioning for all instances of the related ActiveRecord class
+* `void disableVersioning()`: Disables versioning for all instances of the related ActiveRecord class
+* `boolean isVersioningEnabled()`: Checks whether the versioning is enabled

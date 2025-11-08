@@ -48,8 +48,9 @@ title: Documentation
 * [nested_set](/documentation/behaviors/nested-set.html)
 * [query_cache](/documentation/behaviors/query-cache.html)
 * [sluggable](/documentation/behaviors/sluggable.html)
-* [timestampable](/documentation/behaviors/timestampable.html)
 * [sortable](/documentation/behaviors/sortable.html)
+* [synced_table](/documentation/behaviors/synced-table.html)
+* [timestampable](/documentation/behaviors/timestampable.html)
 * [validate](/documentation/behaviors/validate.html)
 * [versionable](/documentation/behaviors/versionable.html)
 * And [concrete_inheritance](08-inheritance.html), documented in the Inheritance Chapter even if it's a behavior
