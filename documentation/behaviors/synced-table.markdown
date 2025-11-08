@@ -5,15 +5,13 @@ title: Synced Table Behavior
 
 # Synced Table Behavior #
 
-The `synced_table` behavior is a new base behavior introduced in ❊ Perpl ❊. It's less intended for using it on it's own, but instead provide a generalization for other behaviors. Both the `archiveable` and `versionable` now use at it's base and hence inherit from `synced_table`.
+The `synced_table` behavior is a new base behavior introduced in ❊ Perpl ❊. It's less intended for using it on it's own, but instead provide a generalization for other behaviors. Both the [`archivable`](/documentation/behaviors/archivable.html) and [`versionable`](/documentation/behaviors/versionable.html) now use at it's base and hence inherit from `synced_table`.
 
 It copies table declaration elements from a source table to a target table (synced table). All matching changes to the source table will be automatically applied to the synced table when building migrations or creating model files. It is a generalization of functionality from the archiveable behavior, with additional configuration options.
 
 ## Example Configuration ##
 
-In the `schema.xml`, use the `<behavior>` tag with the `name="config_store"` parameter to define your config store for each configuration you want to store. 
-
-Let's say you want to template reusable parameters for the `archivable` behavior in your `schema.xml`. Give your config store a unique name with the `id` parameter like e.g. `id="my_archivable"`. Then define all parameters for this behaviour you want to.
+In the `schema.xml`, use the `<behavior>` tag with the `name="synced_table"` parameter to configure your synced table.
 
 ```xml
  <behavior name="synced_table">
@@ -73,6 +71,6 @@ These parameters are available: |
 | inherit_foreign_key_constraints | true/false | Same as inherit_foreign_key_relations, but also creates foreign key constraints in the database to the referenced columns of the source table. | false  |
 | on_skip_sql | ignore/inherit/omit | What to do when parent table has skipSql="true". When set to ignore, the synced table will be created as a regular table. When set to inherit, the synced table will have skipSql="true" too. When set to omit, the synced table will not be created. | omit  |
 
-When used as base, the inhering behavior can override parameter names (for example, versionable and archiveable rename table_name to version_table and archive_table ).
+When used as base, the inheriting behavior can override parameter names (for example, versionable and archiveable rename table_name to version_table and archive_table ).
 
->**Tip**In ❊ Perpl ❊, both the [`archivable`](/documentation/behaviors/archivable.html) as well as the [`versionable`](/documentation/behaviors/versionable.html) behavior are based on the [`synced_table`] behavior since [July 2024](https://github.com/perplorm/perpl/pull/10).
+>**Tip**In ❊ Perpl ❊, both the [`archivable`](/documentation/behaviors/archivable.html) as well as the [`versionable`](/documentation/behaviors/versionable.html) behavior are based on the `synced_table` behavior since [July 2024](https://github.com/perplorm/perpl/pull/10).
