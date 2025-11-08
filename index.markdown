@@ -17,7 +17,7 @@ Via [Composer](https://packagist.org/)
 
 All releases at packagist.org: [packagist.org/packages/perplorm/perpl](https://packagist.org/packages/perplorm/perpl)
 
-All releases at github.com: [github.com/mringler/perpl/releases](https://github.com/mringler/perpl/releases)
+All releases at github.com: [github.com/perplorm/perpl/releases](https://github.com/perplorm/perpl/releases)
 
 {% endcapture %}
 
@@ -108,7 +108,7 @@ and here are the statuses of our master branches:
 
 <table width="100%" class="ecg">
     <tr>
-        <td><a href="https://github.com/mringler/perpl">❊ Perpl ❊</a></td><td><img src="https://github.com/mringler/perpl/actions/workflows/ci.yml/badge.svg?branch=main" /></td>
+        <td><a href="https://github.com/perplorm/perpl">❊ Perpl ❊</a></td><td><img src="https://github.com/perplorm/perpl/actions/workflows/ci.yml/badge.svg?branch=main" /></td>
     </tr>
     <tr>
         <td><a href="https://github.com/smhg/PropelBundle" title="❊ Perpl ❊ Integration in Symfony">PropelBundle with ❊ Perpl ❊ (by smhg)</a></td><td><img src="https://github.com/smhg/PropelBundle/actions/workflows/CI%207.0.yml/badge.svg?branch=7.0" /></td>

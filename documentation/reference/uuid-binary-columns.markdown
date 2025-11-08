@@ -96,4 +96,4 @@ propel:
 
 ## Issues and bugs ##
 
-Please report issues and bugs to the [Perpl issues tracker on GitHub](https://github.com/mringler/Perpl/issues)
+Please report issues and bugs to the [Perpl issues tracker on GitHub](https://github.com/perplorm/Perpl/issues)

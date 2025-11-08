@@ -228,7 +228,7 @@ In this example, both the `book` and `author` table benefit from the `timestampa
 
 ## Writing a Behavior ##
 
-Check [the behaviors bundled with ❊ Perpl ❊](https://github.com/mringler/perpl/tree/main/src/Propel/Generator/Behavior) to see how to implement your own behavior: they are the best starting point to understanding the power of behaviors and builders.
+Check [the behaviors bundled with ❊ Perpl ❊](https://github.com/perplorm/perpl/tree/main/src/Propel/Generator/Behavior) to see how to implement your own behavior: they are the best starting point to understanding the power of behaviors and builders.
 
 ### Modifying the Data Model ###
 

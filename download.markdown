@@ -5,7 +5,7 @@ title: Download ❊ Perpl ❊
 
 # Download ❊ Perpl ❊ #
 
-You can download and install ❊ Perpl ❊ via packagist or by forking the github repository <https://github.com/mringler/perpl>.
+You can download and install ❊ Perpl ❊ via packagist or by forking the github repository <https://github.com/perplorm/perpl>.
 
 For a full installation tutorial, check the [Installation documentation](documentation/01-installation). The following options allow you to download the Propel code and documentation.
 
@@ -36,13 +36,13 @@ Then simply run `php composer.phar install` to fetch ❊ Perpl ❊ and its depen
 Clone it:
 
 ```bash
-$ git clone git://github.com/mringler/perpl.git
+$ git clone git://github.com/perplorm/perpl.git
 ```
 
 Or add it as a submodule:
 
 ```bash
-$ git submodule add git://github.com/mringler/perpl.git /path/to/perpl
+$ git submodule add git://github.com/perplorm/perpl.git /path/to/perpl
 ```
 
 

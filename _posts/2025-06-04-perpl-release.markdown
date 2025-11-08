@@ -30,12 +30,12 @@ Some of the new and improved features below:
 - Added option for importing multiple user-contributed behaviors from the same (user) repo
 - Deprecation of some old internal methods
 
-For the (few) BC-breaking changes and more detailed information on new and updated features, please visit <https://github.com/mringler/perpl>
+For the (few) BC-breaking changes and more detailed information on new and updated features, please visit <https://github.com/perplorm/perpl>
 
 ### Download
 
 You can download ❊ Perpl ❊ via Composer. 
-Please give it a try and [report any bugs](https://github.com/mringler/perpl/issues/new)
+Please give it a try and [report any bugs](https://github.com/perplorm/perpl/issues/new)
 you spot:
 
 ```json
@@ -47,9 +47,9 @@ you spot:
 ```
 
 
-All releases: [github.com/mringler/perpl/releases](https://github.com/mringler/perpl/releases)
+All releases: [github.com/perplorm/perpl/releases](https://github.com/perplorm/perpl/releases)
 
-Of course all of this would not have been possible without the original [Propel Team](https://propelorm.org/about-us.html) & [countless other people](https://github.com/mringler/perpl/graphs/contributors)!
+Of course all of this would not have been possible without the original [Propel Team](https://propelorm.org/about-us.html) & [countless other people](https://github.com/perplorm/perpl/graphs/contributors)!
 
 > **As Isaac Newton <cite>[said](https://digitallibrary.hsp.org/media/collectiveaccess/images/7/0/4/13381_ca_object_representations_media_70422_large.jpg)</cite>:** <q
     cite="https://digitallibrary.hsp.org/media/collectiveaccess/images/7/0/4/13381_ca_object_representations_media_70422_large.jpg">

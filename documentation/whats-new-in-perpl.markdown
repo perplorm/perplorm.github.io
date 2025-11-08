@@ -20,7 +20,7 @@ Some of the new and improved features below:
 - Added option for importing multiple user-contributed behaviors from the same (user) repo
 - Deprecation of some old internal methods
 
-For the (few) BC-breaking changes and more detailed information on new and updated features, please visit <https://github.com/mringler/perpl>
+For the (few) BC-breaking changes and more detailed information on new and updated features, please visit <https://github.com/perplorm/perpl>
 
 ## Difference to Propel2
 
