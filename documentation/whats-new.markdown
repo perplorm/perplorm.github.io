@@ -113,7 +113,7 @@ In earlier versions, Propel provided database queries via some generated Peer cl
 Starting from version 1.5, a new object oriented query API, called [Active Query](reference/model-criteria.html), was introduced. This feature was immediately a first class citizen in Propel world, near the good old Peer classes.
 Now, Propel 2 leaves Peers, which are no longer available, and Active Query generated classes are the only Propel query api (of course, it's still possible to directly execute SQL code).
 
-If you've never used Active Query before, but only Peer classes, please read this [blog post](https://propelorm.org/blog/2010/08/03/refactoring-to-propel-1-5-from-peer-classes-to-query-classes.html).
+If you've never used Active Query before, but only Peer classes, please read this [blog post](/blog/2010/08/03/refactoring-to-propel-1-5-from-peer-classes-to-query-classes.html).
 
 All Peer methods are moved into Query classes, if they didn't already have an equivalent.
 All instance pool references, previously contained in Peer, now have its own Instance Pool Trait.

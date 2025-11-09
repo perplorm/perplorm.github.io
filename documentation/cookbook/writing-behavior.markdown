@@ -8,8 +8,8 @@ title: How to Write A Behavior
 Behaviors are a good way to reuse code across models without requiring inheritance (a.k.a. horizontal reuse)
  This step-by-step tutorial explains how to port model code to a behavior, focusing on a simple example.
 
-In the tutorial "[Keeping an Aggregate Column up-to-date](https://perplorm.github.io/blog/2010/04/29/getting-to-know-propel-1-5-keeping-an-aggregate-column-up-to-date.html)" (Propel 1.x),
-posted in the [Propel blog](https://perplorm.github.io/blog/), the `TotalNbVotes` property of a `PollQuestion` object was updated
+In the tutorial "[Keeping an Aggregate Column up-to-date](/blog/2010/04/29/getting-to-know-propel-1-5-keeping-an-aggregate-column-up-to-date.html)" (Propel 1.x),
+posted in the [Propel blog](/blog/), the `TotalNbVotes` property of a `PollQuestion` object was updated
 each time a related `PollAnswer` object was saved, edited, or deleted. This "aggregate column" behavior was implemented by
 hand using hooks in the model classes. To make it truly reusable, the custom model code needs to be refactored and moved
 to a Behavior class.
@@ -293,7 +293,7 @@ No need to escape dollar signs anymore: this syntax allows for a cleaner separat
 
 ## Adding Another Behavior From A Behavior ##
 
-This is where it's getting tricky. In the [blog post](http://propel.posterous.com/getting-to-know-propel-15-keeping-an-aggregat) describing the column aggregation technique, the calls to the `updateTotalNbVotes()` method come from the `postSave()` and `postDelete()` hooks of the `PollAnswer` class. But the current behavior is applied to the `poll_question` table, how can it modify the code of a class based on another table?
+This is where it's getting tricky. In the [blog post](/blog/2010/04/29/getting-to-know-propel-1-5-keeping-an-aggregate-column-up-to-date.html) describing the column aggregation technique, the calls to the `updateTotalNbVotes()` method come from the `postSave()` and `postDelete()` hooks of the `PollAnswer` class. But the current behavior is applied to the `poll_question` table, how can it modify the code of a class based on another table?
 
 The short answer is: it can't. To modify the classes built for the `poll_answer` table, a behavior must be registered on the `poll_answer` table. But a behavior is just like a column or a foreign key: it has an object counterpart in the buildtime database model. So the trick here is to modify the `AggregateColumnBehavior::modifyTable()` method to _add a new behavior_ to the foreign table. This second behavior will be in charge of implementing the `postSave()` and `postDelete()` hooks of the `PollAnswer` class.
 
@@ -448,6 +448,6 @@ class BehaviorB extends Behavior
 
 These are the basics of behavior writing: implement one of the methods documented in the [behaviors chapter](/documentation/06-behaviors.html#writing-a-behavior) of the Propel guide, and return strings containing the code to be added to the ActiveRecord, Query, and TableMap classes. In addition to the behavior code, you should always write unit tests - all the behaviors bundled with Propel have full unit test coverage. And to make your behavior usable by others, documentation is highly recommended. Once again, Propel core behaviors are fully documented, to let users understand the behavior usage without having to peek into the code.
 
-As for the `AggregateColumnBehavior`, the job is not finished. The [blog post](http://propel.posterous.com/getting-to-know-propel-15-keeping-an-aggregat) emphasized the need for hooks in the Query class, and these are not yet implemented in the above code. Besides, the  post kept quiet about one use case that left the aggregate column not up to date (when a question is detached from a poll without deleting it). Lastly, the parameters required for this behavior are currently a bit verbose, especially concerning the need to define the foreign table and the foreign key - this could be simplified thanks to the knowledge of the object model that behaviors have.
+As for the `AggregateColumnBehavior`, the job is not finished. The [blog post](/blog/2010/04/29/getting-to-know-propel-1-5-keeping-an-aggregate-column-up-to-date.html) emphasized the need for hooks in the Query class, and these are not yet implemented in the above code. Besides, the  post kept quiet about one use case that left the aggregate column not up to date (when a question is detached from a poll without deleting it). Lastly, the parameters required for this behavior are currently a bit verbose, especially concerning the need to define the foreign table and the foreign key - this could be simplified thanks to the knowledge of the object model that behaviors have.
 
 All this is left to the reader as an exercise. Fortunately, the final behavior is part of the Propel core behaviors, so the [aggregate_column documentation](/documentation/behaviors/aggregate-column.html) and the code are all ready to help you to further understand the power of Propel's behavior system.
