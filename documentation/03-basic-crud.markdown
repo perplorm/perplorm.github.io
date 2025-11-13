@@ -26,7 +26,7 @@ $author->save();                  // Inserts this record to the 'author' table
 The column names used in the `setXXX()` methods correspond to the column name in the table.  For example: column `id` will generate `setId()`.  If your column name includes underscores these are removed and the following letter is capitalised, for example column `first_name` will generate `setFirstName()`.  Lastly, you can define the `phpName` attribute of the `<column>` tag in your schema, however this is rare.
 
 > [!TIP]
-> **Tip** Be sure that your column names avoid any reserved words for your database.
+> Be sure that your column names avoid any reserved words for your database.
 
 In the background, the call to `save()` results in the following SQL being executed on the database:
 
@@ -91,7 +91,7 @@ $authors = AuthorQuery::create()
 ```
 
 > [!TIP]
-> **Tip** `filterByXXX()` is the preferred method for creating queries. It is very flexible and accepts values with wildcards as well as arrays for more complex use cases. See [Column Filter Methods](/documentation/reference/model-criteria.html#column_filter_methods) for details.
+> `filterByXXX()` is the preferred method for creating queries. It is very flexible and accepts values with wildcards as well as arrays for more complex use cases. See [Column Filter Methods](/documentation/reference/model-criteria.html#column_filter_methods) for details.
 
 You can also easily limit and order the results on a query. Once again, the Query methods return the current Query object, so you can easily chain them:
 
@@ -192,7 +192,7 @@ AuthorQuery::create()
 ```
 
 > [!TIP]
-> **Tip**A deleted object still lives in the PHP code. It is marked as deleted and cannot be saved anymore, but you can still read its properties:
+> A deleted object still lives in the PHP code. It is marked as deleted and cannot be saved anymore, but you can still read its properties:
 
 ```php
 <?php
