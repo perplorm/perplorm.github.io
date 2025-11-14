@@ -23,7 +23,7 @@ $author->setLastName('Austen');   // Store 'Austen' into the 'last_name' column
 $author->save();                  // Inserts this record to the 'author' table
 ```
 
-The column names used in the `setXXX()` methods correspond to the column name in the table.  For example: column `id` will generate `setId()`.  If your column name includes underscores these are removed and the following letter is capitalised, for example column `first_name` will generate `setFirstName()`.  Lastly, you can define the `phpName` attribute of the `<column>` tag in your schema, however this is rare.
+The column names used in the `setXXX()` methods correspond to the column name in the table.  For example: column `id` will generate `setId()`.  If your column name includes underscores these are removed and the following letter is capitalised, for example column `first_name` will generate `setFirstName()`.  Lastly, you can define the `phpName` attribute of the `<column>` tag in your schema, however this is less common.
 
 > [!TIP]
 > Be sure that your column names avoid any reserved words for your database.
