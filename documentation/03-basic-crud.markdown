@@ -59,7 +59,7 @@ The simplest way to retrieve a row from the database, is to use the generated `f
 $author = AuthorQuery::create()->findPk(1); 
 ```
 
-This issues a simple SELECT SQL query and returns one author object.
+This generates a SELECT SQL query (below) and populates the object with all of the values from the table columns.
 
 ```sql
 SELECT author.id, author.first_name, author.last_name
