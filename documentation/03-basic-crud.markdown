@@ -114,6 +114,8 @@ $author = AuthorQuery::create()
 
 The Perpl Query API is very powerful. The next chapter will teach you to use it to add conditions on related objects. If you can't wait, jump to the [Query API reference](/documentation/reference/model-criteria.html).
 
+
+<-- Hide this for now
 ### Using Custom SQL ###
 
 The `Query` class provides a relatively simple approach to constructing a query. Its database neutrality and logical simplicity make it a good choice for expressing many common queries. However, for a very complex query, it may prove more effective (and less painful) to simply use a custom SQL query to hydrate your Perpl objects.
@@ -149,6 +151,8 @@ There are a few important things to remember when using custom SQL to populate P
 * The resultset columns must be numerically indexed
 * The resultset must contain all the columns of the table (except lazy-load columns)
 * The resultset must have columns _in the same order_ as they are defined in the `schema.xml` file
+
+-->
 
 ## Updating Objects ##
 
