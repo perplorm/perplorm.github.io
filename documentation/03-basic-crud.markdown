@@ -204,6 +204,8 @@ echo $author->isDeleted();    // true
 echo $author->getFirstName(); // 'Jane'
 ```
 
+<!-- Hide this for now
+
 ## Query Termination Methods ##
 
 The Query methods that don't return the current query object are called "Termination Methods". You've already seen some of them: `find()`, `findOne()`, `update()`, `delete()`. There are two more termination methods that you should know about:
@@ -288,6 +290,8 @@ $author2 = AuthorQuery::create()->findPk(1);
 // Skips the SQL query and returns the existing $author1 object
 ```
 When setting the `bulk-load` attribute to true on a [table](/documentation/reference/schema.html#table-element), `findPk()` not only maintains the requested object in the instance pool, but the whole table.
+
+-->
 
 ---
 <span class="next">[Next: Relationships &rarr;](04-relationships.html)</span>
