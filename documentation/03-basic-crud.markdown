@@ -52,7 +52,7 @@ In Perpl, you use the generated Query objects to retrieve existing rows from the
 
 ### Retrieving by Primary Key ###
 
-The simplest way to retrieve a row from the database, is to use the generated `findPk()` method. This assumes you know the primary key of the record you want to retrieve and also that a primary key identified a unique record.  In the following example we are going to presume that our Author table has three fields, the first being the ID field that contains a unique numeric key.
+The simplest way to retrieve a row from the database, is to use the generated `findPk()` method.  In the following example we are going to presume that our Author table has three fields, the first is the ID field and also the primary key.
 
 ```php
 <?php
@@ -91,7 +91,7 @@ $authors = AuthorQuery::create()
 ```
 
 > [!TIP]
-> `filterByXXX()` is the preferred method for creating queries. It is very flexible and accepts values with wildcards as well as arrays for more complex use cases. See [Column Filter Methods](/documentation/reference/model-criteria.html#column_filter_methods) for details.
+> `filterByXXX()` is the common method for creating query conditions. See [Column Filter Methods](/documentation/reference/model-criteria.html#column_filter_methods) for more details.
 
 You can also easily limit and order the results on a query. Once again, the Query methods return the current Query object, so you can easily chain them:
 
@@ -112,7 +112,7 @@ $author = AuthorQuery::create()
   ->findOne();
 ```
 
-The Perpl Query API is very powerful. The next chapter will teach you to use it to add conditions on related objects. If you can't wait, jump to the [Query API reference](/documentation/reference/model-criteria.html).
+For further information regarding query conditions see [Query API reference](/documentation/reference/model-criteria.html).
 
 
 <!-- Hide this for now
@@ -174,7 +174,7 @@ AuthorQuery::create()
   ->update(array('LastName' => 'Austen'));
 ```
 
-This last method is better for updating several rows at once, or if you didn't retrieve the objects before.
+The first method involves two SQL queries, one to retrieve the row and the second to issue an update. The second method generates only a single SQL query, and therefore is more efficient.
 
 ## Deleting Objects ##
 
