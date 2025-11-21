@@ -195,6 +195,8 @@ AuthorQuery::create()
   ->delete();
 ```
 
+<!-- Hide this for now
+
 > [!TIP]
 > A deleted object still lives in the PHP code. It is marked as deleted and cannot be saved anymore, but you can still read its properties:
 
@@ -203,6 +205,8 @@ AuthorQuery::create()
 echo $author->isDeleted();    // true
 echo $author->getFirstName(); // 'Jane'
 ```
+
+-->
 
 <!-- Hide this for now
 
