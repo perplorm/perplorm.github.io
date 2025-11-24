@@ -1,0 +1,264 @@
+<svg
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:cc="http://creativecommons.org/ns#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:svg="http://www.w3.org/2000/svg"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  id="svg421701"
+  viewBox="200 330 620 110"
+  version="1.1"
+>
+  <style>
+    .c1 {
+        fill: #32318e;
+        stroke: #32318e;
+      }
+
+      .c2 {
+        fill: #6869b2;
+        stroke: #6869b2;
+      }
+
+      .c3 {
+        fill: #a0a2d7;
+        stroke: #a0a2d7;
+      }
+    @media (prefers-color-scheme: dark) {
+      .c1 {
+        fill: #79318e;
+        stroke: #79318e;
+      }
+
+      .c2 {
+        fill: #a964b8;
+        stroke: #a964b8;
+      }
+
+      .c3 {
+        fill: #cf9fdb;
+        stroke: #cf9fdb;
+      }
+    }
+  </style>
+  <g id="logo-group">
+    <g
+      id="logo-center"
+      transform="translate(5.684341886080802e-14 0)"
+    >
+      <image
+        xlink:href=""
+        id="icon_container"
+        style="display: none;"
+        x="0"
+        y="0"
+      ></image>
+      <g
+        id="slogan"
+        style="font-style:oblique;font-weight:700;font-size:32px;line-height:1;font-family:Averta;font-variant-ligatures:none;text-align:center;text-anchor:middle"
+        transform="translate(0 0)"
+      ></g>
+      <g
+        id="title"
+        style="font-style:normal;font-weight:normal;font-size:72px;line-height:1;font-family:'Brandmark Sans 5 Spectrum';font-variant-ligatures:normal;text-align:center;text-anchor:middle"
+        transform="translate(0 0)"
+      >
+        <g
+          id="path421710"
+          aria-label="~P"
+          transform="translate(0 333.928) translate(234.0687499999999 -0.3999999999999986) scale(2) translate(-372.96406 50.4)"
+        >
+          <rect
+            x="80.81323"
+            y="75.20882"
+            class="c3"
+            width="21.69226"
+            height="49.5824"
+            transform="translate(303.35969 -125.60876)"
+            stroke-width="0"
+            stroke-linejoin="miter"
+            stroke-miterlimit="2"
+            stroke="#d7a0bc"
+          ></rect>
+          <path
+            class="c1"
+            d="M111.80219,75.20876H69.60437v37.18683h42.19781c10.26886,0,18.59344-8.32452,18.59344-18.59338 S122.07104,75.20876,111.80219,75.20876z"
+            transform="translate(303.35969 -125.60876)"
+            stroke-width="0"
+            stroke-linejoin="miter"
+            stroke-miterlimit="2"
+            stroke="#8e315c"
+          ></path>
+          <rect
+            x="80.81321"
+            y="75.20884"
+            class="c2"
+            width="21.69226"
+            height="37.18677"
+            transform="translate(303.35969 -125.60876)"
+            stroke-width="0"
+            stroke-linejoin="miter"
+            stroke-miterlimit="2"
+            stroke="#b2688c"
+          ></rect>
+        </g>
+        <g
+          id="path421712"
+          aria-label="E"
+          transform="translate(0 333.928) translate(364.8500099999999 -0.3999999999999986) scale(2) translate(-438.35469 50.4)"
+        >
+          <rect
+            x="75.20881"
+            y="91.73634"
+            class="c1"
+            width="49.58238"
+            height="33.05467"
+            transform="translate(363.145881 -125.609)"
+            stroke-width="0"
+            stroke-linejoin="miter"
+            stroke-miterlimit="2"
+            stroke="#8e315c"
+          ></rect>
+          <rect
+            x="75.20881"
+            y="75.209"
+            class="c3"
+            width="49.58238"
+            height="33.05467"
+            transform="translate(363.145881 -125.609)"
+            stroke-width="0"
+            stroke-linejoin="miter"
+            stroke-miterlimit="2"
+            stroke="#d7a0bc"
+          ></rect>
+          <rect
+            x="75.20881"
+            y="91.73634"
+            class="c2"
+            width="49.58238"
+            height="16.52733"
+            transform="translate(363.145881 -125.609)"
+            stroke-width="0"
+            stroke-linejoin="miter"
+            stroke-miterlimit="2"
+            stroke="#b2688c"
+          ></rect>
+        </g>
+        <g
+          id="path421714"
+          aria-label="R"
+          transform="translate(0 333.928) translate(472.85000999999994 -0.3999999999999986) scale(2) translate(-492.35469 50.4)"
+        >
+          <polygon
+            class="c3"
+            points="124.79122,124.79121 75.20879,124.79121 75.20879,75.20879 "
+            transform="translate(417.14591 -125.60876)"
+            stroke-width="0"
+            stroke-linejoin="miter"
+            stroke-miterlimit="2"
+            stroke="#d7a0bc"
+          ></polygon>
+          <path
+            class="c1"
+            d="M106.19781,75.20876H75.2088v37.18683h30.98901c10.26886,0,18.59338-8.32452,18.59338-18.59338 S116.46667,75.20876,106.19781,75.20876z"
+            transform="translate(417.14591 -125.60876)"
+            stroke-width="0"
+            stroke-linejoin="miter"
+            stroke-miterlimit="2"
+            stroke="#8e315c"
+          ></path>
+          <path
+            class="c2"
+            d="M75.20878,75.20885v37.18677h30.98901c1.87744,0,3.6875-0.28418,5.396-0.80176L75.20878,75.20885z"
+            transform="translate(417.14591 -125.60876)"
+            stroke-width="0"
+            stroke-linejoin="miter"
+            stroke-miterlimit="2"
+            stroke="#b2688c"
+          ></path>
+        </g>
+        <g
+          id="path421716"
+          aria-label="P"
+          transform="translate(0 333.928) translate(580.98725 -0.25600000000000733) scale(2) translate(-546.42331 50.328)"
+        >
+          <rect
+            x="75.2088"
+            y="75.20882"
+            class="c3"
+            width="21.69232"
+            height="49.5824"
+            transform="translate(471.214516 -125.53676)"
+            stroke-width="0"
+            stroke-linejoin="miter"
+            stroke-miterlimit="2"
+            stroke="#d7a0bc"
+          ></rect>
+          <path
+            class="c1"
+            d="M106.19781,75.20876H75.2088v37.18683h30.98901c10.26886,0,18.59338-8.32452,18.59338-18.59338 S116.46667,75.20876,106.19781,75.20876z"
+            transform="translate(471.214516 -125.53676)"
+            stroke-width="0"
+            stroke-linejoin="miter"
+            stroke-miterlimit="2"
+            stroke="#8e315c"
+          ></path>
+          <rect
+            x="75.20879"
+            y="75.20884"
+            class="c2"
+            width="21.69226"
+            height="37.18677"
+            transform="translate(471.214516 -125.53676)"
+            stroke-width="0"
+            stroke-linejoin="miter"
+            stroke-miterlimit="2"
+            stroke="#b2688c"
+          ></rect>
+        </g>
+        <g
+          id="path421718"
+          aria-label="L"
+          transform="translate(0 333.928) translate(688.98725 -0.3999999999999986) scale(2) translate(-600.42331 50.4)"
+        >
+          <rect
+            x="75.2088"
+            y="75.20876"
+            class="c1"
+            width="21.69232"
+            height="49.5824"
+            transform="translate(525.214516 -125.608763)"
+            stroke-width="0"
+            stroke-linejoin="miter"
+            stroke-miterlimit="2"
+            stroke="#8e315c"
+          ></rect>
+          <rect
+            x="75.2088"
+            y="112.39559"
+            class="c3"
+            width="49.5824"
+            height="12.39563"
+            transform="translate(525.214516 -125.608763)"
+            stroke-width="0"
+            stroke-linejoin="miter"
+            stroke-miterlimit="2"
+            stroke="#d7a0bc"
+          ></rect>
+          <rect
+            x="75.20879"
+            y="112.39557"
+            class="c2"
+            width="21.69226"
+            height="12.39563"
+            transform="translate(525.214516 -125.608763)"
+            stroke-width="0"
+            stroke-linejoin="miter"
+            stroke-miterlimit="2"
+            stroke="#b2688c"
+          ></rect>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
