@@ -105,9 +105,19 @@ Created to assist with the layout / organisation of the documentation for Perpl
     <li>02-buildtime</li>
     <li>03 basic-crud</li>
     <li>04 query</li>
-    <li>05 results</li>
-    <li>06 update-and-delete</li>
-    <li>07 relationships<br/>
+    <li>05 active-record</li>
+    <li>06 transactions</li>
+    <li>07 logging<br/>
+     I have tried multiple times to get monolog to work - it never did.  I always resorted to my own logging mechanisms.
+     I believe this needs more development work to identify issues and give better reporting.
+    </li>
+    <li>08 inheritance<br/>
+     My experience of inheritance was a bit like the behaviors - it was difficult to implement retrospectively.  If you were designing from scratch it would be easier.  I also found myself trying to cast variables between the different subclasses which didn't always work.  If we are going to include this we may need more development to ensure the configuration is correct and if not provide better messaging.
+    </li>
+    <li>09 migrations<br/>
+     I've seen lots of discussions about people struggling with this.  Personally I've never used it.  It sounds simple, but clearly that isn't the case.
+    </li>
+    <li>xx relationships<br/>
      I have never used "insert a related row", eg '$book->setAuthor($authorObject)' does anybody use this?<br/>
      I have never used "save cascade", eg '$book->setAuthor($newUnsavedAuthorObject)' does anybody use this?<br/>
      Retrieving related objects: '$authorObject->getBooks()' I use this frequently but I would include it in the Active Record reference.<br/>
@@ -118,6 +128,12 @@ Created to assist with the layout / organisation of the documentation for Perpl
      On-update and On-delete, I would include this in the Schema reference.<br/>
      Minimizing queries, I would include in the Query reference.<br/>
      Therefore this document can be removed.<br/>
+    </li>
+    <li>xx behaviors<br/>
+     I would like to consolidate this in the behavior's folder.  I have tried using these before but quite unsuccessfully.  It's easy to add the behavior to the schema, however there are often table changes required that are not automatically added.  We need to document these more carefully so that when people do use them they will work.
+    </li>
+    <li>xx configuration<br/>
+     This seems to be a repeat of the buildtime entry with more detail.  I would include this in buildtime and then remove this entry.
     </li>
    </ul>
   </td>
