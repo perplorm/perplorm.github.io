@@ -516,6 +516,11 @@ footer ul li {
     text-decoration: none;
 }
 
+/* Fixing the push-down effect of .documentation-navigation li.new::after */
+.documentation-navigation li.new {
+    max-height: 1lh;
+}
+
 .documentation-navigation li.new a::after{
     content: "❊ new ❊";
     border: 1px dotted;
