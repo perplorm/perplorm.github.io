@@ -13,82 +13,82 @@ Created to assist with the layout / organisation of the documentation for Perpl
      Installing Perpl, via composer or git
     </li>
     <li>02-buildtime<br/>
-     Defining the schema file, database, tables, columns, foreign keys.
-     Building the model using the schema.xml and yaml / php / json / ini / xml configuration files
-     propel sql:build
-     propel model:build
-     propel config:convert
-     vendor/autoload.php
+     Defining the schema file, database, tables, columns, foreign keys.<br/>
+     Building the model using the schema.xml and yaml / php / json / ini / xml configuration files<br/>
+     propel sql:build<br/>
+     propel model:build<br/>
+     propel config:convert<br/>
+     vendor/autoload.php<br/>
     </li>
     <li>03-basic-crud<br/>
-     Creating new records
-     Getting and setting object properties
-     Query
-     Updating an object
-     Deleting an object
+     Creating new records<br/>
+     Getting and setting object properties<br/>
+     Query<br/>
+     Updating an object<br/>
+     Deleting an object<br/>
     </li>
     <li>04-relationships<br/>
-     Inserting a related row
-     Save cascade
-     Fetch related objects and properties
-     Query by object
-     Use and endUse
-     Many to many relationship
-     Multiple primary keys
-     Multiple foreign keys
-     One to one relationships
-     On-update and On-delete
-     Performance
-     Model only relationships
+     Inserting a related row<br/>
+     Save cascade<br/>
+     Fetch related objects and properties<br/>
+     Query by object<br/>
+     Use and endUse<br/>
+     Many to many relationship<br/>
+     Multiple primary keys<br/>
+     Multiple foreign keys<br/>
+     One to one relationships<br/>
+     On-update and On-delete<br/>
+     Performance<br/>
+     Model only relationships<br/>
     </li>
     <li>05-transactions<br/>
-     Simple transation
-     Pre and Post hooks wrapped inside the transaction
-     Nested transactions
-     Performance
+     Simple transation<br/>
+     Pre and Post hooks wrapped inside the transaction<br/>
+     Nested transactions<br/>
+     Performance<br/>
     </li>
     <li>06-behaviors<br/>
-     Pre and Post hooks
-     Bundled behaviors
-     Using behaviors
-     Customizing behaviors
-     Writing a behavior
-     Other hooks
+     Pre and Post hooks<br/>
+     Bundled behaviors<br/>
+     Using behaviors<br/>
+     Customizing behaviors<br/>
+     Writing a behavior<br/>
+     Other hooks<br/>
     </li>
     <li>07-logging<br/>
-     Using monolog
-     Debugging database activity
-     Counting queries
-     Retrieve the last query
-     Full query logging
-     Logging more events
-     Adding profiler information
-     Performance
+     Using monolog<br/>
+     Debugging database activity<br/>
+     Counting queries<br/>
+     Retrieve the last query<br/>
+     Full query logging<br/>
+     Logging more events<br/>
+     Adding profiler information<br/>
+     Performance<br/>
     </li>
     <li>08-inheritance<br/>
-     Single table inheritance
-     Using inherited objects
-     Retrieving inherited objects
-     Abstract entities
-     Class table inheritance
-     Delegation
-     Multiple inheritance
-     Concrete table inheritance
-     Using inherited model classes
-     Data replication
+     Single table inheritance<br/>
+     Using inherited objects<br/>
+     Retrieving inherited objects<br/>
+     Abstract entities<br/>
+     Class table inheritance<br/>
+     Delegation<br/>
+     Multiple inheritance<br/>
+     Concrete table inheritance<br/>
+     Using inherited model classes<br/>
+     Data replication<br/>
     </li>
     <li>09-migrations<br/>
-     Migration workflow
-     Migration tasks
-     Migration configuration
-     Migrating data
+     Migration workflow<br/>
+     Migration tasks<br/>
+     Migration configuration<br/>
+     Migrating data<br/>
     </li>
     <li>10-configuration<br/>
-     Naming conventions
-     Supported formats
-     Using parameters
-     Precedence among configuration properties
-     Internals
+     Naming conventions<br/>
+     Supported formats<br/>
+     Using parameters<br/>
+     Precedence among configuration properties<br/>
+     Internals<br/>
     </li>
     <li>whats-new-in-perpl<br/>
      Perpl new features
@@ -99,6 +99,7 @@ Created to assist with the layout / organisation of the documentation for Perpl
    </ul>
   </td>
   <td>
+   <p>These are mostly comments about what should be changed.  If there are no comments then assume the document will only contain minor changes</p>
    <ul> <!-- proposed docs -->
     <li>01-installation</li>
     <li>02-buildtime</li>
@@ -106,6 +107,18 @@ Created to assist with the layout / organisation of the documentation for Perpl
     <li>04 query</li>
     <li>05 results</li>
     <li>06 update-and-delete</li>
+    <li>07 relationships<br/>
+     I have never used "insert a related row", eg '$book->setAuthor($authorObject)' does anybody use this?<br/>
+     I have never used "save cascade", eg '$book->setAuthor($newUnsavedAuthorObject)' does anybody use this?<br/>
+     Retrieving related objects: '$authorObject->getBooks()' I use this frequently but I would include it in the Active Record reference.<br/>
+     I have never used objects in a query, eg '$query->filterByAuthor($authorObject)' does anybody use this?<br/>
+     Embedded query, eg use(), filterByXXX(), and endUse(), I use this frequently but I would include it in the Query reference.<br/>
+     Many-to-many, save cascade and retrieving related objects, does anybody use this?<br/>
+     More than two primary keys, I would include this in the Active Record reference.<br/>
+     On-update and On-delete, I would include this in the Schema reference.<br/>
+     Minimizing queries, I would include in the Query reference.<br/>
+     Therefore this document can be removed.<br/>
+    </li>
    </ul>
   </td>
  </tr>
