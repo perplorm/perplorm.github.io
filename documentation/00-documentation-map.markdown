@@ -205,14 +205,7 @@ Created to assist with the layout / organisation of the documentation for Perpl
    
   </td>
   <td>
-   <ul>
-    <li>02 Cookbook ???</li>
-    <ul>
-     <li>0201 PDO</li>
-     <li>0202 sql</li>
-     <li>0203 namespaces</li>
-    </ul>
-   </ul>
+   [remove the cookbook]
    
   </td>
  </tr>
