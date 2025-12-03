@@ -1,3 +1,5 @@
+source:  src
+destination: _site
 highlighter: rouge
 permalink: /blog/:year/:month/:day/:title.html
 markdown: kramdown
