@@ -6,7 +6,7 @@ kramdown:
    auto_ids: true
    entity_output: numeric
    hard_wrap: false
-exclude: [ README.md, Gemfile, psd ]
+exclude: [ README.md, Gemfile, psd, docker-compose.yml ]
 navigation:
  - title: Documentation
    url: /documentation/
