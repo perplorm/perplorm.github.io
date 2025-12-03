@@ -1,0 +1,151 @@
+:root {
+    color-scheme: light dark;
+}
+  
+@media (prefers-color-scheme: dark) {
+    /* All color values have been directly inverted by substracting the original values from FFFFFF resp. FFF where applicable. */
+    /* Unfortunately all the blacks are way too black and hard to distinguish, so this needs further polishing. */
+    /* But hey, a start is a start! */
+    :root {
+        color-scheme: dark;
+        background: #0D0D0D;
+        color: #BABABA;
+    }
+
+    body{
+        background: #0D0D0D;
+        color: #BABABA  
+    }
+
+    h3 {
+        color: #E0E0E0;
+    }
+
+    .home-banner {
+        background-color: #680058;
+    }
+
+    header {
+        background-color: #420042;
+    }
+
+    header .logo .logo-text {
+        color: #b0b;
+        text-shadow: 0 1px 3px #bff, 0 -1px 3px #bff;     
+    }
+
+    header .logo .logo-text::after {
+        content: '❊ Perpl ❊'
+    }
+
+    header .topmenu .element > a {
+        color: #bff
+    }
+
+    header li a.current,
+    .header-line a, .header-line a:link {
+        background-color: dodgerblue;
+    }
+
+    .home-banner h2,
+    .home-banner h3,
+    .home-features {
+        color: #ccc;
+    }
+
+
+
+    .home-features {
+        background-color: #6a0043;
+    }
+
+    .home-features-item h3, .home-features-item-last h3 {
+        text-shadow: 
+        -1px -1px 1px rgba(235, 195, 234, 0.5),
+        1px 1px 1px rgba(235, 195, 234, 0.5),
+        1px -1px 1px rgba(235, 195, 234, 0.5),
+        -1px 1px 1px rgba(235, 195, 234, 0.5);
+    }
+
+    
+    .home-content-bottom {
+        background-color: #070707;
+        color: #BBB;
+    }
+
+    .home-content-bottom > div.wrapper, 
+    .documentation-content, 
+    .main-wrapper {
+        background-color: #040404; 
+    }
+
+
+    .home-content-bottom > div.wrapper h1 {
+        text-align: center;
+        color: #ccc;
+        text-shadow: 0;
+    }
+
+    code {
+        color: #ccc;
+        background-color: rgba(249, 249, 249, 0.1);
+    }
+
+    .highlight{
+        background-color: #230029;
+    }
+
+    .markdown blockquote {
+        background: black;
+        color: #ddd;
+        border: 1px solid darkslateblue;
+    }
+
+    .markdown blockquote strong:first-child {
+        background: #18100A;
+    }
+
+    .markdown blockquote strong:first-child::before {
+        background-color: #000;
+        color: #ccc;
+    }
+
+    .markdown thead tr th {
+        background-color: #111;
+    }
+
+    .documentation-navigation li.current a:hover {
+        text-shadow: 0px 0px 2px gold;
+    }
+
+    /* jQuery UI stuff */
+
+    .ui-tabs .ui-tabs-panel {
+        background-color: #202020;
+        border-color: #230029;
+    }
+
+    .ui-tabs .ui-tabs-nav {
+        border-color: #230029;
+    }
+
+    .ui-tabs .ui-tabs-nav li {
+        background-color: #202020; 
+    }
+
+    .ui-tabs .ui-tabs-nav li a {
+        color: #ccc;
+        background-color: #101010; 
+    }
+
+    .ui-tabs .ui-tabs-nav li.ui-tabs-active {
+        border-color: #202020;
+    }
+
+    .ui-tabs .ui-tabs-nav li.ui-tabs-active a{
+        color: #ddd;
+        border-color:#230029;
+        border-bottom-color: #202020;
+        background-color: #202020;
+    }
+}

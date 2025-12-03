@@ -1,0 +1,690 @@
+body, html {
+    background-color: #f2f2f2;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    padding: 0;
+    margin: 0;
+    color: #454545;
+    font-size: 14px;
+}
+
+/***************  Regarding system colors use  ****************/
+
+/* For reference see https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/system-color
+/* Throughout the document, several system colors are used. And also the currentColor keyword for inheritance.
+/* In light mode, the system colors should all be pretty much cross platform.
+
+/* In dark mode however, there seems to be a difference between some system colors:
+/* For example, Field and Canvas should basically have the same color, as they do in light mode.
+
+/* However, Field has a nice dark grayish hue of rgb(43, 42, 51) on Firefox and rgb(59, 59, 59) on Edge/Chromium on Windows
+/* whereas Field on iOS Safari is plain white rgb(255, 255, 255)
+
+/* The alternative would be Canvas: rgb(18, 18, 18) on Edge/Chromium, rgb(28, 27, 34) on Firefox on Windows which both is already much darker
+/* whereas Canvas on iOS Safari is plain black rgb(0, 0, 0)
+
+/* To be able to use a nice additional background system color, Field is being used for user agents that support a dark mode of this color
+/* To not not have iOS devices a very wrong white background in dark mode, 
+/* -apple-system-control-background is put on top as a fallback
+/* this color will be ignored as being invalid by other browsers but will render black rgb(0, 0, 0) on iOs Safari in dark mode */
+/* Please report/file an issue in case there are other user agents that treat Field differently as outlined above */
+
+
+b, strong {
+    font-weight: 400;
+}
+
+header {
+    height: 55px;
+    line-height: 55px;
+    background: #860886;
+    border-bottom: 1px solid #55abe0;
+
+}
+
+/* Later (when collapsible), to be applied for all widths. */
+@media only screen and (min-width: 600px) {
+    header {
+        position: sticky;
+        top: 1px; /* To enable sticky positioning */
+        transform: translate(0,-1px); /* To revert above rule ;-) */
+        z-index: 2; /* To avoid ugly overscroll from elements below */
+    }
+}
+
+
+/* Boilerplate for later use, to create responsive menus */
+/* For multiple menues, we must take care of proper id/class naming to not mix up the opening/reveal mechanism of different menues. */
+/* #hamburger: The open/close trigger element, e.g. a hamburger menu or three dots. */
+/* #menu.hidden: The very menu to hide initially in mobile resolution. */
+/*
+@media only screen and (max-width: 600px) {
+    #hamburger {display:initial} 
+    #menu.hidden {display:none;}
+    .flex {display: flex; flex-wrap: wrap;}
+}
+*/
+
+header .logo {
+    text-decoration: none;
+}
+
+header .logo .logo-text{
+    font-size: 55px;
+    font-weight: bold;
+    color: #fff;
+}
+
+header .topmenu .element > a {
+    color: #fff;
+}
+
+header > div.wrapper,
+footer > div.wrapper,
+.header-line > .wrapper,
+.main-wrapper {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.fullscreen div.wrapper {
+    max-width: inherit !important;
+}
+
+.fullscreen header  {
+    padding: 0 50px;
+}
+
+.documentation > div.wrapper {
+    margin: 0 50px;
+}
+
+.main-wrapper {
+    max-width: 700px;
+    padding: 25px 150px;
+    background-color: #FBFBFB;
+}
+
+header img {
+    position: relative;
+    top: 15px;
+}
+
+.break {
+    clear: both;
+}
+
+nav {
+    float: right;
+}
+
+.documentation-navigation ul,
+header ul,
+footer ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+footer ul li,
+header ul li {
+    float: left;
+    margin-left: 20px;
+}
+
+footer ul li {
+    margin-left: 0;
+    margin-right: 20px;
+}
+
+footer li a,
+header li a {
+    text-decoration: none;
+    font-size: 16px;
+
+}
+
+header ul li {
+    margin-left: 10px;
+}
+
+header li a {
+    padding: 3px 10px;
+}
+
+header li a.current {
+    display: inline-block;
+    background-color: #57b8ee;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    line-height: 25px;
+    color: white;
+}
+
+h1, h2, h3, h4 {
+    font-weight: 400;
+    color: #ad31b1;
+    margin: 0;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 300;
+    padding-bottom: 20px;
+}
+
+/* Adds a small container with the most recent commit date for the page, appended to h1 and footer if available. */
+.update-info {
+    font-size: small;
+    color: GrayText;    
+}    
+
+h1 span.update-info {
+    display: block;
+    position: relative;
+    left: 2em;    
+    top: -0.5em;
+}
+
+h1 span.update-info a {
+    color: GrayText;
+    text-decoration: underline dotted;
+    -webkit-text-decoration:  underline dotted;
+    /** Due to a Safari quirk, the prefixed declaration HAS to come here AFTER the regular declaration, 
+    *see https://gomakethings.com/text-decoration-style-in-webkit/ 
+    **/
+}
+
+h1 span.update-info a:hover {
+    color: #ad31b1;
+}
+
+
+h2 {
+    font-size: 22px;
+    padding-bottom: 15px;
+}
+
+.markdown h2 {
+    border-top: 1px solid #EBC3EA;
+}
+
+h3 {
+    color: #1f1f1f;
+    font-size: 18px;
+    padding: 5px 0;
+}
+
+a, a:link {
+    color: #B923BE;
+}
+
+h1 a, h2 a, h3 a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: #838383;
+}
+
+/* We need to disable some links as they are still valuable but don't function anymore */
+a.link-disabled, a.button.link-disabled {
+    cursor: not-allowed;
+    text-decoration: line-through;
+}
+
+.read-more a {
+    color: gray;
+}
+
+.home-banner {
+    height: 400px;
+    background-color: #f07bde;
+    text-align: center;
+    transition-duration: 1s;
+    overflow: hidden;
+}
+
+.header-line {
+    height: 15px;
+    background-color: #560059;
+}
+
+.header-line > .wrapper {
+    text-align: right;
+    line-height: 35px;
+    padding-right: 50px;
+}
+
+.header-line-big {
+    height: 35px;
+}
+
+.header-line a,
+.header-line a:link {
+    padding: 4px 10px;
+    display: inline-block;
+    background-color: #57b8ee;
+    color: white;
+    text-decoration: none;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    font-size: 15px;
+    line-height: 20px;
+}
+
+.header-line a.active {
+    background-color: #e055d1;
+}
+
+.header-line a:hover {
+    background-color: #e055d1;
+}
+
+.home-banner:hover {
+    height: 640px;
+}
+
+.home-banner h2 {
+    color: white;
+    text-shadow: 0 1px 1px rgb(108, 108, 108);
+    font-size: 30px;
+    max-width: 530px;
+    margin: auto;
+    line-height: 38px;
+    padding-top: 50px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 100;
+    overflow: hidden;
+}
+
+.home-banner h3 {
+    color: white;
+    padding-bottom:20px
+}
+
+.home-banner h2 strong {
+    font-weight: 400;
+}
+
+.home-screen {
+    width: 774px;
+    height: 533px;
+    margin: auto;
+    position: relative;
+    background-image: url(../images/home-screen-bg.png);
+}
+
+.home-screen img {
+    position: relative;
+    top: 47px;
+}
+
+.home-features {
+    position: relative;
+    background-color: #EBC3EA;
+    color: #333;
+    font-size: 14px;
+    line-height: 20px;
+    padding-bottom: 30px;
+}
+
+.home-features > .wrapper {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.home-features-item {
+    float: left;
+    width: 330px;
+    padding-top: 30px;
+    text-align: center;
+    white-space: pre-line;
+}
+
+.home-features-item-last {
+    clear: left;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.home-features-item h3,
+.home-features-item-last h3 {
+    color: #93098A;
+    text-shadow: 0 1px 2px #E4E4E4;
+    font-size: 30px;
+    font-weight: 300;
+    padding-bottom: 10px;
+
+}
+
+.home-content-top {
+    max-width: 1000px;
+    margin: 25px auto;
+}
+
+
+.home-content-left,
+.home-content-right {
+    box-sizing: border-box;
+    width: 50%;
+}
+
+.home-content-right {
+    float: right;
+    padding: 30px;
+    border-left: 1px solid #ec7bf0;
+}
+
+.home-content-left {
+    float: left;
+    padding: 25px;
+    padding-top: 30px;
+}
+
+.home-content-right table {
+    width: 100%;
+}
+
+.home-content-right table {
+    margin-top: 5px;
+}
+
+.home-content-right table td {
+    padding: 6px 0;
+}
+
+.home-content-bottom {
+    background-color: #F8F8F8;
+    color: #444;
+    font-size: 14px;
+    /* line-height: 20px; */
+}
+
+.home-content-bottom > div.wrapper {
+    max-width: 950px;
+    margin: auto;
+    padding: 50px 25px;
+    background-color: #FBFBFB;
+}
+
+.home-content-bottom > div.wrapper h1 {
+    text-align: center;
+    color: #333;
+    text-shadow: 0;
+}
+
+.home-content-bottom ul {
+    list-style: none;
+    line-height: 22px;
+}
+
+.home-content-bottom ul li:before {
+    content: "✓";
+    position: relative;
+    left: -4px;
+}
+
+.home-buttons {
+    text-align: center;
+}
+
+.button,
+.button:link {
+    background-color: #ddc3eb;
+    border: 0px;
+    color: #9E5596;
+    font-size: 12px;
+    padding: 0px 20px;
+    -webkit-appearance: none; /* Find me a real button - this works only on <button> or other form ELEMENTS and we only have 4 <input> elements that can be styled later*/
+    border-radius: 0;
+    line-height: 50px;
+    height: 50px;
+    display: inline-block;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.center {
+    text-align: center;
+}
+
+.home-buttons .button {
+    border-right: 1px solid #B5C3CC;
+    text-decoration: none;
+    box-shadow: 0 2px 1px #D4ACCC;
+}
+
+.home-buttons .button:last-child {
+    border-right: 0;
+}
+
+.button:hover {
+    background-color: #dbb9de;
+}
+
+footer {
+    text-align: center;
+    padding: 15px 0;
+    border-top: 1px solid #EBC3EA;
+    color: #8d3790;
+}
+
+footer a,
+footer a:link {
+    text-decoration: underline;
+    color: #8d3790;
+}
+
+
+footer a:hover {
+    color: #838383;
+}
+
+footer ul li {
+    line-height: 80px;
+}
+
+.documentation-navigation {
+    float: left;
+    width: 250px;
+    padding: 25px 0;
+}
+
+
+.documentation-navigation h3 {
+    font-family: 'Open Sans', sans-serif;
+    padding: 5px 0;
+    font-size: 16px;
+    font-weight: 300;
+    border-bottom: 1px solid #EBC3EA;
+    margin: 10px 0;
+}
+
+
+.documentation-navigation li {
+    padding-left: 10px;
+    line-height: 22px;
+}
+
+.documentation-navigation li a {
+    font-size: 13px;
+    text-decoration: none;
+}
+
+/* Fixing the push-down effect of .documentation-navigation li.new::after */
+.documentation-navigation li.new {
+    max-height: 1lh;
+}
+
+.documentation-navigation li.new a::after{
+    content: "❊ new ❊";
+    border: 1px dotted;
+    border-radius: 3px;
+    padding-left:3px;
+    padding-right:3px;
+    margin-left: 0.5em; 
+    background-color: Field;
+    background-color: -apple-system-control-background;
+}
+
+.documentation-navigation li.new::after {
+    content: "❊ New in Perpl ❊";
+    padding: 2px;
+    display: none;
+    position: relative;
+    top: -2em;
+    right: -250px;
+    width: 150px;
+    text-align: center;
+    color: #B923BE;
+    background-color: Field;
+    background-color: -apple-system-control-background;
+    border: 1px solid #B923BE;
+    border-radius: 3px;
+    box-shadow: 0px 0px 15px 2px purple, 0px 0px 5px 12px Field;
+    box-shadow: 0px 0px 15px 2px purple, 0px 0px 5px 12px -apple-system-control-background;  
+    text-shadow: 0px 0px 3px currentColor;
+}
+
+.documentation-navigation li.new:hover::after {
+    display: inline-block;
+}
+
+.documentation-navigation li.current a,
+.documentation-navigation li.current a:link {
+    font-style:  italic;    
+    letter-spacing: .2em;
+    backdrop-filter:invert(20%);
+    display: inline-block; /* Fix backdrop-filter not working on iOS Safari */
+    padding-left:10px;
+    padding-right:  10px; 
+    border-radius:5px;
+}
+
+.documentation-navigation li.current a:hover {
+    font-style: oblique 25deg;
+    font-weight: bold;
+    color: currentColor;
+    text-shadow: 0px 0px 2px purple;
+}
+
+.documentation-navigation li.new.current a::after {
+    background-color:initial; 
+    border: none; 
+    text-decoration: underline;
+}
+
+.documentation-content ul.toc {
+    float: right;
+    margin-left: 25px;
+    margin-bottom: 25px;
+    padding: 15px;
+    background-color: #f7c4f1;
+    border-radius: 6px;
+}
+
+.documentation-content ul.toc li,
+.documentation-content ul.toc li li {
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.documentation-content ul.toc a,
+.documentation-content ul.toc a:link {
+    color: #932B96;
+    text-decoration: none;
+}
+
+.documentation-content ul.toc a:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+.documentation-content {
+    border-left: 1px solid #EBC3EA;
+    background-color: #fbfbfb;
+    margin-left: 250px;
+    padding-bottom: 5px;
+}
+
+.documentation-content .next {
+    text-align: right;
+    display: block;
+}
+
+.documentation-content .wrapper {
+    margin: 25px;
+    margin-top: 0;
+}
+
+.search {
+    text-align: right;
+    padding: 10px 5px;
+}
+
+.jumper {
+    position: fixed;
+    opacity: 0;
+    transition: 2s;
+    bottom: 50px;
+    right: 50px;
+    height: 50px;
+}
+
+.jumper a,
+.jumper a:link {
+    display: block;
+    background-color: #8dce91;
+    padding: 8px 15px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    text-decoration: none;
+    color: white;
+}
+
+.fork_and_edit {
+    margin: 0;
+}
+
+.member {
+    text-align: center;
+    float: left;
+    margin: 25px;
+    color: gray;
+}
+
+.member p {
+    margin: 5px 0;
+}
+
+.member img {
+    width: 170px;
+    border: 1px solid #ECECEC;
+    padding: 5px;
+    background-color: #FFF;
+}
+
+.member .icon-twitter,
+.member .icon-github {
+    text-decoration: none;
+}
+
+.member h3 {
+    color: #ad31b1;
+}
+
+svg {
+    font-family: "Source Code Pro", "Fira Code", monospace;
+    font-size:20px;
+    font-weight:300;
+    stroke: currentColor;
+    fill: Field;
+    fill: -apple-system-control-background;
+};
