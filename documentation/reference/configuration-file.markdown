@@ -14,7 +14,7 @@ You can specify configuration properties in a file, in the main directory of you
 First, some conventions:
 
 * Text surrounded by a  `/` is text that you would provide and is not defined in the language. (i.e. a table name is a good example of this.)
-* Items where you have an alternative choice have a `|` character between them (i.e. true|false)
+* Items where you have an alternative choice have a `|` character between them (i.e. true\|false)
 * Alternative choices may be delimited by `{` and `}` to indicate that this is the default option, if not overridden elsewhere.
 
 
