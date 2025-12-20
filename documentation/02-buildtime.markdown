@@ -35,7 +35,7 @@ Perpl will issue a number of prompts - for this example I have an existing datab
 <img width="725" height="110" alt="image" src="https://github.com/user-attachments/assets/80cfbba7-21dc-4488-9b9e-b6792a3b9141" /><br/>
 <img width="836" height="225" alt="image" src="https://github.com/user-attachments/assets/72870969-a119-42a8-bfd7-7e411e6da049" />
 
-My project folder now looks like this:
+My project folder now looks like this:<br/>
 <img width="485" height="234" alt="image" src="https://github.com/user-attachments/assets/b3619c2d-9349-4ba6-a42c-4d82dca04143" />
 
 * generated-classes: this contains the Query and Object classes for each of the tables in my database
