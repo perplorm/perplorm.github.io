@@ -87,7 +87,9 @@ perpl:
       connections:
           - bookstore
 ```
+</details>
 
+<details>
   <summary>perpl.php</summary>
 ```php
 <?php
@@ -117,7 +119,9 @@ return [
     ]
 ];
 ```
+</details>
 
+<details>
   <summary>perpl.json</summary>
 ```json
 {
@@ -145,7 +149,9 @@ return [
     }
 }
 ```
+</details>
 
+<details>
   <summary>perpl.ini</summary>
 ```ini
 [perpl]
@@ -171,7 +177,9 @@ runtime.connections[0]    = bookstore
 generator.defaultConnection = bookstore
 generator.connections[0] = bookstore
 ```
+</details>
 
+<details>
   <summary>perpl.xml</summary>
 ```xml
 <?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
