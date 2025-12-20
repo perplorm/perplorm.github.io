@@ -6,7 +6,7 @@ configuration: true
 
 # The Build Time #
 
-With Perpl installed we can now begin the configuration process to connect our PHP code to our database.  We are assuming at this stage that you have a folder for this project and you have installed Perpl into this folder (using 'composer').  My project folder currently looks like this:
+With Perpl installed we can now begin the configuration process to connect our PHP code to our database.  We are assuming at this stage that you have a folder for this project and you have installed Perpl into this folder (using 'composer').  My project folder currently looks like this:<br/>
 <img width="485" height="104" alt="image" src="https://github.com/user-attachments/assets/1383d23c-37a4-4796-b163-b6534a63496c" />
 
 We require database software to be accessible, there are six options to choose from:
@@ -65,17 +65,10 @@ We recommend keeping this file in the root project folder.
 
 Below are examples of the configuration files using the different formats.
 
-<div class="conftabs">
-<ul>
-<li><a href="#tabyaml">propel.yaml</a></li>
-<li><a href="#tabphp">propel.php</a></li>
-<li><a href="#tabjson">propel.json</a></li>
-<li><a href="#tabini">propel.ini</a></li>
-<li><a href="#tabxml">propel.xml</a></li>
-</ul>
-<div id="tabyaml">
-{% highlight yaml %}
-propel:
+<details>
+  <summary>perpl.yaml</summary>
+```yaml
+perpl:
   database:
       connections:
           bookstore:
@@ -93,10 +86,10 @@ propel:
       defaultConnection: bookstore
       connections:
           - bookstore
-{% endhighlight %}
-</div>
-<div id="tabphp">
-{% highlight php %}
+```
+
+  <summary>perpl.php</summary>
+```php
 <?php
 
 return [
@@ -123,10 +116,10 @@ return [
         ]
     ]
 ];
-{% endhighlight %}
-</div>
-<div id="tabjson">
-{% highlight json %}
+```
+
+  <summary>perpl.json</summary>
+```json
 {
     "propel": {
         "database": {
@@ -151,11 +144,11 @@ return [
         }
     }
 }
-{% endhighlight %}
-</div>
-<div id="tabini">
-{% highlight ini %}
-[propel]
+```
+
+  <summary>perpl.ini</summary>
+```ini
+[perpl]
 ;
 ; Database section
 ;
@@ -177,13 +170,13 @@ runtime.connections[0]    = bookstore
 ;
 generator.defaultConnection = bookstore
 generator.connections[0] = bookstore
-{% endhighlight %}
-</div>
-<div id="tabxml">
-{% highlight xml %}
+```
+
+  <summary>perpl.xml</summary>
+```xml
 <?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
 <config>
-    <propel>
+    <perpl>
         <database>
             <connections>
                 <connection id="bookstore">
@@ -206,9 +199,8 @@ generator.connections[0] = bookstore
         </generator>
     </propel>
 </config>
-{% endhighlight %}
-</div>
-</div>
+```
+</details>
 
 
 
