@@ -1,7 +1,6 @@
 ---
-layout: documentation
 title: The Build Time
-configuration: true
+last update: December 2025
 ---
 
 # The Build Time #
