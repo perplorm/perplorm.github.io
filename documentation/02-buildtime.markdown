@@ -29,10 +29,10 @@ perpl init
 
 Perpl will issue a number of prompts - for this example I have an existing database 'bookshop' that will be used to initialise the ORM:
 
-<img width="399" height="161" alt="image" src="https://github.com/user-attachments/assets/868debeb-1733-407b-a187-54c3083dd927" />
-<img width="378" height="156" alt="image" src="https://github.com/user-attachments/assets/0fcea52e-71e9-46fb-a537-a74b68aae8ea" />
-<img width="881" height="100" alt="image" src="https://github.com/user-attachments/assets/3aaec966-75b0-4793-b1fa-9725f71c7f65" />
-<img width="725" height="110" alt="image" src="https://github.com/user-attachments/assets/80cfbba7-21dc-4488-9b9e-b6792a3b9141" />
+<img width="399" height="161" alt="image" src="https://github.com/user-attachments/assets/868debeb-1733-407b-a187-54c3083dd927" /><br/>
+<img width="378" height="156" alt="image" src="https://github.com/user-attachments/assets/0fcea52e-71e9-46fb-a537-a74b68aae8ea" /><br/>
+<img width="881" height="100" alt="image" src="https://github.com/user-attachments/assets/3aaec966-75b0-4793-b1fa-9725f71c7f65" /><br/>
+<img width="725" height="110" alt="image" src="https://github.com/user-attachments/assets/80cfbba7-21dc-4488-9b9e-b6792a3b9141" /><br/>
 <img width="836" height="225" alt="image" src="https://github.com/user-attachments/assets/72870969-a119-42a8-bfd7-7e411e6da049" />
 
 My project folder now looks like this:
