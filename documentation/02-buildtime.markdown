@@ -66,7 +66,8 @@ We recommend keeping this file in the root project folder.
 Below are examples of the configuration files using the different formats.
 
 <details>
-  <summary>perpl.yaml</summary>
+<summary>perpl.yaml</summary>
+  
 ```yaml
 perpl:
   database:
@@ -87,10 +88,12 @@ perpl:
       connections:
           - bookstore
 ```
+
 </details>
 
 <details>
-  <summary>perpl.php</summary>
+<summary>perpl.php</summary>
+  
 ```php
 <?php
 
@@ -119,10 +122,12 @@ return [
     ]
 ];
 ```
+
 </details>
 
 <details>
-  <summary>perpl.json</summary>
+<summary>perpl.json</summary>
+  
 ```json
 {
     "propel": {
@@ -149,11 +154,13 @@ return [
     }
 }
 ```
+
 </details>
 
 <details>
-  <summary>perpl.ini</summary>
-```ini
+<summary>perpl.ini</summary>
+  
+```text
 [perpl]
 ;
 ; Database section
@@ -177,10 +184,12 @@ runtime.connections[0]    = bookstore
 generator.defaultConnection = bookstore
 generator.connections[0] = bookstore
 ```
+
 </details>
 
 <details>
-  <summary>perpl.xml</summary>
+<summary>perpl.xml</summary>
+  
 ```xml
 <?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
 <config>
@@ -208,6 +217,7 @@ generator.connections[0] = bookstore
     </propel>
 </config>
 ```
+
 </details>
 
 
