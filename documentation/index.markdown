@@ -13,7 +13,7 @@ title: Documentation
 
 ## Project Setup ##
 
- * [Installing Propel](01-installation.html) Install Propel using Git, or a zipball/tarball.
+ * [Installing ❊ Perpl ❊](01-installation.html) Install ❊ Perpl ❊ using composer, git, or a zipball/tarball.
  * [Building A Project](02-buildtime.html) Generate a PHP model based on a XML schema.
 
 ## Propel Basics ##
