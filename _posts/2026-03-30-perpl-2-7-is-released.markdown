@@ -7,7 +7,7 @@ published: true
 
 Do away with the winter blues, we have some springtime news:
 
-We have released [❊ Perpl ❊ 2.7](https://github.com/perplorm/perpl/releases/tag/v2.67.0) in March and [❊ Perpl ❊ 2.6](https://github.com/perplorm/perpl/releases/tag/v2.6.0) earlier in November. 
+We have released [❊ Perpl ❊ 2.7](https://github.com/perplorm/perpl/releases/tag/v2.7.0) in March and [❊ Perpl ❊ 2.6](https://github.com/perplorm/perpl/releases/tag/v2.6.0) earlier in November. 
 
 Also, we have a new repo! It enables you to create a Docker test environment and is avalaible under <https://github.com/perplorm/perpl-test-docker>, see also our [Announcement](https://github.com/perplorm/perpl/discussions/86) info.
 
