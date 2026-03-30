@@ -14,3 +14,5 @@ title: The Reference Guides
 * [Database Schema](schema.html)
 
 * [Compatibility Index](compatibility-index.html)
+
+* [Store UUIDs as binary data](uuid-binary-columns.html)

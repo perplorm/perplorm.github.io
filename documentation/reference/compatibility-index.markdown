@@ -20,9 +20,9 @@ At the moment we list only MySQL, SQLite and Postgres since only those are unit 
 | General          |   Yes  |  Partial(1) |    Yes
 | `name` attribute |   Yes  |  No(2)      |    Yes
 
-1) As of version 3.6.19, SQLite supports foreign key constraints.
+1) As of version 3.6.19, SQLite supports foreign key constraints which must [explitcitly be enabled](https://www.sqlite.org/foreignkeys.html#fk_enable).
 
-2) SQLite does not support named foreignKeys.
+2) SQLite does not support named foreign keys.
 
 
 ### Other
