@@ -137,6 +137,7 @@ Then rebuild your model, and there you go: two columns, `created_at` and `update
 * [delegate](/documentation/behaviors/delegate.html)
 * [i18n](/documentation/behaviors/i18n.html)
 * [nested_set](/documentation/behaviors/nested-set.html)
+* [query_cache](/documentation/behaviors/query-cache.html)
 * [sluggable](/documentation/behaviors/sluggable.html)
 * [sortable](/documentation/behaviors/sortable.html)
 * [synced_table](/documentation/behaviors/synced-table.html)

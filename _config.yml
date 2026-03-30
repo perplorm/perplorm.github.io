@@ -82,6 +82,8 @@ documentation:
    url: /documentation/behaviors/i18n.html
  - title: nested_set
    url: /documentation/behaviors/nested-set.html
+ - title: query_cache
+   url: /documentation/behaviors/query-cache.html
  - title: sluggable
    url: /documentation/behaviors/sluggable.html
  - title: sortable
