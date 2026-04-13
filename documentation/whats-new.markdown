@@ -38,7 +38,7 @@ Here is an extract of the output:
 
 ```bash
 config
-  config:convert-xml   Transform the XML configuration to PHP code leveraging the ServiceContainer
+  config:convert   Transform the XML configuration to PHP code leveraging the ServiceContainer
 
 database
   database:reverse     Reverse-engineer a XML schema file based on given database
@@ -73,7 +73,7 @@ The Phing tasks that you used at buildtime are now refactored to Commands. They 
 | build-model   | model:build       |
 | build-sql     | sql:build         |
 | insert-sql    | sql:insert        |
-| convert-conf  | config:convert-xml|
+| convert-conf  | config:convert    |
 | diff          | migration:diff    |
 | status        | migration:status  |
 | migrate       | migration:migrate |
