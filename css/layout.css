@@ -32,9 +32,13 @@ body, html {
 /* Please report/file an issue in case there are other user agents that treat Field differently as outlined above */
 
 
+/*** Overrides font-weight: bold; in normalize.css for unknown reasons (which is by itself an override already) ***/
+/* Deactivated until either someone sees a meaning in this or agrees it's just plain ridiculous */
+/*
 b, strong {
     font-weight: 400;
 }
+*/
 
 header {
     height: 55px;

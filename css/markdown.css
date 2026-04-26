@@ -99,8 +99,6 @@
 
 .markdown blockquote strong:first-child:before {
     content: '!';
-    /* padding-right: 5px; */
-    /* padding: 3px; */
     border-radius: 10px;
     background-color: #FFF;
     display: inline-block;
@@ -108,7 +106,7 @@
     width: 18px;
     height: 20px;
     text-align: center;
-    padding-left: 2px;
+    padding-left: 1px;
     margin-right: 8px;
     color: #333;
 }
