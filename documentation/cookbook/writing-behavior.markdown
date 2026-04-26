@@ -116,7 +116,7 @@ class AggregateColumnBehavior extends Behavior
 
 This method shows that a behavior class has access to the `<parameters>` defined for it in the `schema.xml` through the `getParameter()` command. Behaviors can also always access the `Table` object attached to them, by calling `getTable()`. A `Table` can check if a column exists and add a new one easily. The `Table` class is one of the numerous generator classes that serve to describe the object model at buildtime, together with `Column`, `ForeignKey`, `Index`, and a lot more classes. You can find all the buildtime model classes under the `generator/lib/model` directory.
 
-_Tip_: Don't mix up the _runtime_ database model (`DatabaseMap`, `TableMap`, `ColumnMap`, `RelationMap`) with the _buildtime_ database model (`Database`, `Table`, `Column`, etc.). The buildtime model is very detailed, in order to ease the work of the builders that write the ActiveRecord and Query classes. On the other hand, the runtime model is optimized for speed, and carries minimal information to allow correct hydration and binding at runtime. Behaviors use the buildtime object model, because they are run at buildtime, so they have access to the most powerful model.
+> **Tip**Don't mix up the _runtime_ database model (`DatabaseMap`, `TableMap`, `ColumnMap`, `RelationMap`) with the _buildtime_ database model (`Database`, `Table`, `Column`, etc.). The buildtime model is very detailed, in order to ease the work of the builders that write the ActiveRecord and Query classes. On the other hand, the runtime model is optimized for speed, and carries minimal information to allow correct hydration and binding at runtime. Behaviors use the buildtime object model, because they are run at buildtime, so they have access to the most powerful model.
 
 Now rebuild the model and the SQL, and sure enough, the new column is there. `BasePollQuestion` offers a `getTotalNbVotes()` and a `setTotalNbVotes()` method, and the table creation SQL now includes the additional `total_nb_votes` column:
 
@@ -131,7 +131,7 @@ CREATE TABLE poll_question
 )Type=InnoDB;
 ```
 
-_Tip_: The behavior only adds the column if it's not present (`!$table->hasColumn($columnName)`).
+> **Tip**The behavior only adds the column if it's not present (`!$table->hasColumn($columnName)`).
 So if a user needs to customize the column type, or any other attribute, he can
 include a `<column>` tag in the table with the same name as defined in the
 behavior, and the `modifyTable()` will then skip the column addition.

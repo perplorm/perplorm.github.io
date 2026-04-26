@@ -14,9 +14,11 @@ layout: base_fullscreen
     <div class="wrapper">
         <div class="documentation-navigation">
             <ul>
+                {% assign renderdeprecationblocks = nil %}
+                {% assign deprecationinfolink = nil %}
                 {% for link in site.documentation %}
-                    {% if link.updatestatus and link.updatestatus == "new" %}
-                        {% assign updatestatus = "new" %}
+                    {% if link.updatestatus %}
+                        {% assign updatestatus = link.updatestatus %}
                     {% else %}
                         {% assign updatestatus = "" %}
                     {% endif %}
@@ -28,6 +30,12 @@ layout: base_fullscreen
                         {% if page.url contains linkurl %}
                             {% assign deckungsgleich = 'wahr' %}
                             {% assign current = 'current' %}
+                            {% if link.updatestatus and link.updatestatus == "deprecated" %}
+                                {% assign renderdeprecationblocks = true %}
+                                {% if link.updatelink %}
+                                    {% assign deprecationinfolink = link.updatelink %}
+                                {% endif %}
+                            {% endif %}
                         {% else %}
                             {% assign deckungsgleich = 'falsch' %}
                         {% endif %}
@@ -40,6 +48,15 @@ layout: base_fullscreen
             </ul>
         </div>
         <div class="documentation-content markdown">
+            {% if renderdeprecationblocks %}
+                <div class="deprecation-notice-container">
+                    <div class="deprecation-notice-content">
+                        {% if deprecationinfolink %}<a href="{{ deprecationinfolink }}" class="deprecation-infolink" title="For more information, please visit {{ deprecationinfolink }}.">{% endif %}
+                        Deprecated Content
+                        {% if deprecationinfolink %}</a>{% endif %}
+                    </div>
+                </div>
+            {% endif %}
             <div class="search">
                 <form action="/search.html">
                     <input name="q" placeholder="Search on propelorm.org ..." type="text" />

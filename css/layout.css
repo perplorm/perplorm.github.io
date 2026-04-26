@@ -517,23 +517,32 @@ footer ul li {
 }
 
 /* Fixing the push-down effect of .documentation-navigation li.new::after */
-.documentation-navigation li.new {
+.documentation-navigation li.new,
+.documentation-navigation li.deprecated {
     max-height: 1lh;
+}
+
+.documentation-navigation li.new a::after,
+.documentation-navigation li.deprecated a::after {
+    padding-left:3px;
+    padding-right:3px;
+    margin-left: 0.5em;
 }
 
 .documentation-navigation li.new a::after{
     content: "❊ new ❊";
     border: 1px dotted;
     border-radius: 3px;
-    padding-left:3px;
-    padding-right:3px;
-    margin-left: 0.5em; 
     background-color: Field;
     background-color: -apple-system-control-background;
 }
 
-.documentation-navigation li.new::after {
-    content: "❊ New in Perpl ❊";
+.documentation-navigation li.deprecated a::after {
+    content: "⚠️";
+}
+
+.documentation-navigation li.new::after,
+.documentation-navigation li.deprecated::after {
     padding: 2px;
     display: none;
     position: relative;
@@ -551,7 +560,17 @@ footer ul li {
     text-shadow: 0px 0px 3px currentColor;
 }
 
-.documentation-navigation li.new:hover::after {
+.documentation-navigation li.new::after {
+   content: "❊ New in Perpl ❊";
+}
+
+.documentation-navigation li.deprecated::after {
+   content: "⚠️ Deprecated ⚠️";
+}
+
+
+.documentation-navigation li.new:hover::after, 
+.documentation-navigation li.deprecated:hover::after {
     display: inline-block;
 }
 
@@ -573,7 +592,8 @@ footer ul li {
     text-shadow: 0px 0px 2px purple;
 }
 
-.documentation-navigation li.new.current a::after {
+.documentation-navigation li.new.current a::after,
+.documentation-navigation li.deprecated.current a::after {
     background-color:initial; 
     border: none; 
     text-decoration: underline;
@@ -621,6 +641,31 @@ footer ul li {
 .documentation-content .wrapper {
     margin: 25px;
     margin-top: 0;
+}
+
+.deprecation-notice-container {
+    position: sticky; 
+    top: 50vh;
+}
+
+.deprecation-notice-content {
+    position: fixed;
+    left: calc(50vw - 3em);
+    width: min-content;
+    padding: 10px;
+    border: 2px dashed aliceblue;
+    border-radius: 1em;
+    color: lightyellow;
+    font-size: xx-large;
+    text-align: center;
+    background: rgba(0,255,255,0.05);
+    backdrop-filter: hue-rotate(45deg) blur(1px);
+    transform: rotate(-22.5deg);
+} 
+
+a.deprecation-infolink:link {
+    color: inherit;
+    text-decoration: none;
 }
 
 .search {

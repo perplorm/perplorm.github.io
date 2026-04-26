@@ -48,6 +48,10 @@
         text-align: center;
     }
 
+    .deprecation-notice-content {
+        position: absolute;
+    }
+
     .home-content-left {
         float: none;
         padding: 5px;

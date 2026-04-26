@@ -84,6 +84,8 @@ documentation:
    url: /documentation/behaviors/nested-set.html
  - title: query_cache
    url: /documentation/behaviors/query-cache.html
+   updatestatus: deprecated
+   updatelink: https://github.com/perplorm/perpl/issues/95
  - title: sluggable
    url: /documentation/behaviors/sluggable.html
  - title: sortable
