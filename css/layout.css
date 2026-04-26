@@ -596,7 +596,14 @@ footer ul li {
 .documentation-navigation li.deprecated.current a::after {
     background-color:initial; 
     border: none; 
+}
+
+.documentation-navigation li.new.current a::after {
     text-decoration: underline;
+}
+
+.documentation-navigation li.deprecated.current a::after {
+  font-style: initial;
 }
 
 .documentation-content ul.toc {
