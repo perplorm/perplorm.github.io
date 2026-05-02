@@ -114,6 +114,10 @@
         text-shadow: 0px 0px 2px gold;
     }
 
+    .documentation-navigation li.deprecated a::after {
+        filter: grayscale() invert();
+    }
+
     /* jQuery UI stuff */
 
     .ui-tabs .ui-tabs-panel {

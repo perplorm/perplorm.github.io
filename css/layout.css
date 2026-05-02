@@ -543,6 +543,8 @@ footer ul li {
 
 .documentation-navigation li.deprecated a::after {
     content: "⚠️";
+    filter: grayscale();
+    opacity: .5;
 }
 
 .documentation-navigation li.new::after,
