@@ -5,11 +5,11 @@ layout: null
 {%- assign split_chars = site.data.split_chars.chars -%}
 
 [
-  {% for page in site.posts %}
+  {% for page in site.documentation %}
     {
       "title": "{{ page.title | escape }}",
       "keywords": {
-        {%- assign sanitized_content = page.content | append: ' ' | append: page.title | strip_html | downcase | escape %} 
+        {%- assign sanitized_content = page.content | append: ' ' | append: page.title | strip_html | downcase | escape | replace: '\', '\\' %} 
         {%- for char in split_chars %}
             {%- assign sanitized_content = sanitized_content | replace: char, ' ' %}
         {%- endfor %}
