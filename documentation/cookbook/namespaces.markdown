@@ -174,6 +174,7 @@ generator.schema.autoPackage = true
 </config>
 {% endhighlight %}
 </div>
+</div>
 
 
 Now Propel will automatically create a `package` attribute, and therefore distribute model classes in subdirectories, based on the `namespace` attribute, and you can  omit the manual `package` attribute in the schema:
