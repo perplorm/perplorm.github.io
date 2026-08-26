@@ -2,7 +2,7 @@
 layout: null
 ---
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="https://www.w3.org/2005/Atom">
+<feed xmlns="http://www.w3.org/2005/Atom">
     <title>The ❊ Perpl ❊ Blog</title>
     <link href="https://perplorm.github.io/blog/atom.xml" rel="self"/>
     <link href="https://perplorm.github.io/"/>
@@ -12,6 +12,9 @@ layout: null
     {% for post in site.posts %}
     <entry>
         <title>{{ post.title }}</title>
+        <author>
+            <name>{{ post.author }}</name>
+        </author>
         <link href="https://perplorm.github.io{{ post.url }}"/>
         <updated>{{ post.date | date_to_xmlschema }}</updated>
         <id>https://perplorm.github.io{{ post.id }}</id>

@@ -4,7 +4,7 @@ title: Propel Query by Example
 published: true
 ---
 
-If you're used to Criteria and Peer methods, you may find the new query API introduced in Propel 1.5 intimidating. There is nothing to be afraid of: you will find this new API more intuitive and faster to read, write and test, whether you use a text editor or an IDE.<p /> To convince you, there is nothing better than a side-by-side comparison of the same query written with the old and the new API. Without further introduction, let's dive in:
+If you're used to Criteria and Peer methods, you may find the new query API introduced in Propel 1.5 intimidating. There is nothing to be afraid of: you will find this new API more intuitive and faster to read, write and test, whether you use a text editor or an IDE.<p> To convince you, there is nothing better than a side-by-side comparison of the same query written with the old and the new API. Without further introduction, let's dive in:
 
 ```php
 /*

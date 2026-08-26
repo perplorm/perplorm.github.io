@@ -169,7 +169,7 @@ $book = BookQuery::create()
 
 ## phpDoc For Magic Methods
 
-As for allowing the `orderBy()` method to use IDE completion, using generated methods is out of the question. It is acceptable to add filter methods that react differently according to the column type, it is not acceptable to add one-line proxy methods for each column just to support an `orderByTitle()` syntax.<p /> The ModelCriteria already supports a call to `orderByTitle()`, through the magic `__call()` method. But magic and IDE completion don't get along well with each other. Or do they?
+As for allowing the `orderBy()` method to use IDE completion, using generated methods is out of the question. It is acceptable to add filter methods that react differently according to the column type, it is not acceptable to add one-line proxy methods for each column just to support an `orderByTitle()` syntax.<p> The ModelCriteria already supports a call to `orderByTitle()`, through the magic `__call()` method. But magic and IDE completion don't get along well with each other. Or do they?
 
 The phpDocumentor grammar allows one to document magic methods by way of <a href="http://manual.phpdoc.org/HTMLSmartyConverter/PHP/phpDocumentor/tutorial_tags.method.pkg.html">`@method` comments</a> in the class description, that the IDEs recognize. So the alternative to generating one method for every column is to generate one comment line for every column. That way the IDE sees the `orderByTitle()` method at development time, but this method doesn't bloat the `BookQuery` code since `__call()` already handles it pretty well.
 
