@@ -10,7 +10,7 @@ published: true
 <param name="allowfullscreen" value="true" />
 <param name="allowscriptaccess" value="always" />
 <param name="bgcolor" value="#ffffff" />
-<param name="flashvars" value="prezi_id=20zx62inia2y&amp;lock_to_path=0&amp;color=ffffff&amp;autoplay=no&amp;autohide_ctrls=0" /><embed src="http://prezi.com/bin/preziloader.swf" type="application/x-shockwave-flash" height="400" flashvars="prezi_id=20zx62inia2y&amp;lock_to_path=0&amp;color=ffffff&amp;autoplay=no&amp;autohide_ctrls=0" width="500"></embed>
+<param name="flashvars" value="prezi_id=20zx62inia2y&amp;lock_to_path=0&amp;color=ffffff&amp;autoplay=no&amp;autohide_ctrls=0" /><embed src="http://prezi.com/bin/preziloader.swf" type="application/x-shockwave-flash" height="400" flashvars="prezi_id=20zx62inia2y&amp;lock_to_path=0&amp;color=ffffff&amp;autoplay=no&amp;autohide_ctrls=0" width="500">
 </object>
 <div class="prezi-player-links">
 <p><a href="http://prezi.com/20zx62inia2y/apprendre-en-persistant-propel-php-forum-2010/">Apprendre en persistant - Propel - Php Forum 2010</a> on <a href="http://prezi.com">Prezi</a></p>
