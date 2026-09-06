@@ -61,6 +61,8 @@ documentation:
    url: /documentation/reference/model-criteria.html
  - title: Configuration Properties Reference
    url: /documentation/reference/configuration-file.html
+ - title: CLI Reference
+   url: /documentation/reference/cli.html
  - title: Compatibility index
    url: /documentation/reference/compatibility-index.html
 
