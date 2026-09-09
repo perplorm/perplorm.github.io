@@ -41,6 +41,6 @@ echo $post1-&gt;getSlug(); // '/posts/how-is-life-on-earth' </pre></div>
   <div class="code"><pre>Make sure you read the sluggable documentation to see all the available settings to customize this brand new behavior.</pre></div>
 </div>
 
-<p />
+<p>
 
 </div>

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: ! 'Don''t Do This At Home #6: Repeat The Same Filter For All Queries'
+date: 2012-07-30 10:46:00 +0200
 published: true
 ---
 <p>Don't Do This At Home #6: Repeat The Same Filter For All Queries</p>

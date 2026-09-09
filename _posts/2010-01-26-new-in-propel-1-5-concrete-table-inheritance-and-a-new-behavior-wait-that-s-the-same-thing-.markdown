@@ -95,7 +95,7 @@ The fact that the behavior system, introduced in Propel 1.4, provides the best i
 
 ## One More Thing
 
-Usually, ORMs stop the Concrete Table Inheritance implementation there. But not Propel. The `concrete_inheritance` behavior does not only copy the <em>table structure</em>, it also copies <em>data</em>.<p /> Every time you save an `Article` or a `Video` object, Propel saves a copy of the `title` and `category_id` columns in a `Content` object. Consequently, retrieving objects regardless of their child type becomes very easy:
+Usually, ORMs stop the Concrete Table Inheritance implementation there. But not Propel. The `concrete_inheritance` behavior does not only copy the <em>table structure</em>, it also copies <em>data</em>.<p> Every time you save an `Article` or a `Video` object, Propel saves a copy of the `title` and `category_id` columns in a `Content` object. Consequently, retrieving objects regardless of their child type becomes very easy:
 
 ~~~php
 <?php

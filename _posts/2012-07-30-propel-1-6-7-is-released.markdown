@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Propel 1.6.7 is Released
+date: 2012-07-30 09:58:00 +0200
 published: true
 ---
 <p><strong>Propel 1.6.7</strong>&nbsp;is now available, and it's&nbsp;<strong>the fourth bug fixes only release</strong>.</p>
