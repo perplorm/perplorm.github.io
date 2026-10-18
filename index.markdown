@@ -117,6 +117,12 @@ Here are the statuses of ❊ Perpl ❊ and related projects:
             </a>
         </td>
     </tr>
+    <tr>
+        <td><a href="https://github.com/perplorm/PerplBundle" title="❊ Perpl ❊ Integration in Symfony">PerplBundle for Symfony <br> <small>(also works with Propel)</small></a></td><td><img src="https://github.com/perplorm/PerplBundle/actions/workflows/ci.yml/badge.svg" /></td>
+    </tr>
+    <tr>
+        <td><a href="https://github.com/perplorm/perpl-test-docker" title="Run Perpl tests with Docker.">Perpl Test Docker Environment</a></td><td></td>
+    </tr>
     <tr><td colspan=2><hr></td></tr>
     <tr>
         <td><a href="https://github.com/propelorm/Propel2">Propel 2.0.0-beta4</a></td>
@@ -128,9 +134,6 @@ Here are the statuses of ❊ Perpl ❊ and related projects:
                 <img src="https://codecov.io/gh/propelorm/Propel2/branch/master/graph/badge.svg?token=L1thFB9nOG" alt="Propel's Codecov Percentage">
             </a>
         </td>
-    </tr>
-    <tr>
-        <td><a href="https://github.com/smhg/PropelBundle" title="❊ Perpl ❊ Integration in Symfony">PropelBundle with ❊ Perpl ❊ (by smhg)</a></td><td><img src="https://github.com/smhg/PropelBundle/actions/workflows/CI%207.0.yml/badge.svg?branch=7.0" /></td>
     </tr>
     <tr>
         <td><a href="https://github.com/SkyFoxvn/PropelBundle" title="Propel 2.0.0-beta4 Integration in Symfony">PropelBundle (by SkyFoxvn)</a></td><td><img src="https://github.com/SkyFoxvn/PropelBundle/actions/workflows/CI%207.0.yml/badge.svg?branch=7.0" /></td>
