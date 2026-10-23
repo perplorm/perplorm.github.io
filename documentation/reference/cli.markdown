@@ -41,7 +41,11 @@ Migrations ensure Perpl recognizes changes in your schema definition and writes 
 
 ### Configuration Changes ###
 
-Each time you change entries in your [configuration](documentation/10-configuration.html), Perpl needs to generate PHP classes to make your configuration work. After you have saved the changes in configuration file, call `config:convert` to build the configuration classes.
+Each time you change entries in your [configuration](/documentation/10-configuration.html), Perpl needs to generate PHP classes to make your configuration work. After you have saved the changes in configuration file, call `config:convert` to build the configuration classes.
+
+### Schema Import ###
+
+Whether you switch to Perpl from an [existing project](/documentation/cookbook/working-with-existing-databases.html), have to restore a schema definition or want to integrate additional existing databases to your project, you will want to retrieve and control the database schema with Perpl. Calling `database:reverse` Perpl will connect to one of your [standard database connections](configuration-file.html#database-settings) with `--connection`, a previously configured [reverse connection](configuration-file.html#reverse-engineering) or an explicitly given database connection and retrieve its schema. Explicit connections can be specified with an optional argument like so: `"mysql:host=localhost;dbname=db;user=root;password=pwd"`.
 
 ## Command Overview ##
 
@@ -51,7 +55,7 @@ The following commands are available in Perpl. Some of them have aliases which h
 |	---------------	|	---------------	|	---------------	|	---------------	|	---------------	|
 |	init	|		|	Interactive selection	|	Initializes a new project	|		|
 |	model:build	|	build-model	|	--mysql-engine, --schema-dir, --output-dir, --object-class, --object-stub-class, --object-multiextend-class, --query-class, --query-stub-class, --query-inheritance-class, --query-inheritance-stub-class, --tablemap-class, --pluralizer-class, --enable-identifier-quoting, --target-package, --disable-package-object-model, --disable-namespace-auto-package, --composer-dir, --loader-script-dir	|	Build the model classes based on Propel XML schemas	|		|
-|	sql:build	|	build-sql	|	--mysql-engine, --schema-dir, --output-dir, --validate, --overwrite, --connection, --schema-name, --table-prefix, --composer-dir	|		|		|
+|	sql:build	|	build-sql	|	--mysql-engine, --schema-dir, --output-dir, --validate, --overwrite, --connection, --schema-name, --table-prefix, --composer-dir	|	Create SQL script with DDL statements from schema.xml in --output-dir (or paths.sqlDir in config)	|		|
 |	sql:insert	|	insert-sql	|	--sql-dir, --connection	|	Run SQL scripts in directory --sql-dir (or paths.sqlDir in config), typically used to (re-)initialize database by running SQL scripts from sql:build.	|		|
 |	config:convert	|	convert-conf	|	--config-dir, --output-dir, --output-file, --loader-script-dir	|	Transform the configuration to PHP code leveraging the ServiceContainer	|		|
 |	migration:create	|		|	--output-dir, --schema-dir, --migration-table, --connection, --editor, --comment, --suffix	|	Create an empty migration class	|		|

@@ -25,8 +25,6 @@ documentation:
  - title: ❊ Perpl ❊ Changelog
    url: https://github.com/perplorm/perpl/releases
    updatestatus: new
- - title: What's new in Propel 2.0
-   url: /documentation/whats-new.html
  - title: Propel API Documentation
    url: https://api.propelorm.org/
  - title: Setup
