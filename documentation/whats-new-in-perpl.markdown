@@ -33,3 +33,7 @@ For the (few) BC-breaking changes and more detailed information on new and updat
 ## Difference to Propel2
 
 See all [changes between ❊ Perpl ❊ and Propel2](https://github.com/propelorm/Propel2/compare/master...perplorm:perpl:main).
+
+## Upgrading from Propel1.x ##
+
+If you are still working with Propel 1.x, please first consult the update document under [What's new in Propel 2.0](whats-new.html).

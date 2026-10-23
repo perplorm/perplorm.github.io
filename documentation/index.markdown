@@ -8,7 +8,7 @@ title: Documentation
 
  * [What's New in ❊ Perpl ❊](whats-new-in-perpl.html) The differences of ❊ Perpl ❊ compared to Propel2.
  * [❊ Perpl ❊ Changelog](https://github.com/perplorm/perpl/releases) The ❊ Perpl ❊ release history.
- * [What's New in Propel 2.0](whats-new.html) Users of 1.x versions can check the changes here.
+ * [What's New in Propel 2.0](whats-new.html) Users still on Propel 1.x versions please first read the Propel 2 breaking changes before upgrading to Perpl.
  * [Propel API Documentation](http://api.propelorm.org/) The generated API documentation.
 
 ## Project Setup ##
