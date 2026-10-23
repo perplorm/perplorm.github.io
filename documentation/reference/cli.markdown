@@ -45,7 +45,7 @@ Each time you change entries in your [configuration](/documentation/10-configura
 
 ### Schema Import ###
 
-Whether you switch to Perpl from an [existing project](/documentation/cookbook/working-with-existing-databases.html), have to restore a schema definition or want to integrate additional existing databases to your project, you will want to retrieve and control the database schema with Perpl. Calling `database:reverse` Perpl will connect to one of your [standard database connections](configuration-file.html#database-settings) with `--connection`, a previously configured [reverse connection](configuration-file.html#reverse-engineering) or an explicitly given database connection and retrieve its schema. Explicit connections can be specified with an optional argument like so: `"mysql:host=localhost;dbname=db;user=root;password=pwd"`.
+Whether you switch to Perpl from an [existing project](/documentation/cookbook/working-with-existing-databases.html), have to restore a schema definition or want to integrate additional existing databases to your project, you will want to retrieve and control the database schema with Perpl. Calling `database:reverse` Perpl will connect to one of your [standard database connections](configuration-file.html#database-settings) with the `--database-name` option, a previously configured [reverse connection](configuration-file.html#reverse-engineering) or an explicitly given database connection and retrieve its schema. Explicit connections can be specified with an optional connection argument like so: `"mysql:host=localhost;dbname=db;user=root;password=pwd"`.
 
 ## Command Overview ##
 
